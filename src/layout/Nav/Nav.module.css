@@ -1,0 +1,92 @@
+.navHeader {
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navHeader > nav {
+    width: 100%;
+    max-width: var(--max-width);
+    padding: 30px var(--container-padding);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navLinks {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    color: var(--night);
+    font-weight: 500;
+}
+.navLink {
+    transition: .3s ease-in-out;
+}
+.navLink:hover {
+    color: var(--orange);
+}
+.loginLink {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.navLoginBtn {
+    padding: 14px 24px;
+    background: var(--orange);
+    border: none;
+    border: 8px;
+    color: var(--white);
+    border-radius: 5px;
+    transition: .3s ease-in-out;
+}
+.navLoginBtn:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.navIcon {
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+    color: var(--night);
+}
+@media screen and (max-width: 1200px) {
+    .navIcon {
+        font-size: 25px;
+        cursor: pointer;
+        display: block;
+        color: var(--night);
+    }
+    .navLinks {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        gap: 0px;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        max-width: 1200px;
+        background: var(--white);
+        z-index: 10;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+        padding: 50px 0px;
+    }
+    .showNav {
+        display: none;
+    }
+    .navLink {
+        padding: 25px;
+    }
+    .navLoginBtn {
+        padding: 10px;
+    }
+}
+@media screen and (max-width: 481px) {
+    .navLoginBtn {
+        background: none;
+        color: var(--night);
+    }
+}
