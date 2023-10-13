@@ -1,10 +1,14 @@
 import React from 'react'
+import Logo from '../../components/Logo/Logo'
+import {Link} from 'react-router-dom'
 
 const Nav = () => {
   return (
     <header>
         <nav>
-            <div>Logo</div>
+            <div>
+                <Logo />
+            </div>
             <ul>
                 <Link></Link>
                 <Link></Link>

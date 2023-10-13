@@ -6,9 +6,9 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <Routes>
-        <Route></Route>
-      </Routes>
+      {/* <Routes>
+        <Route path='/' element ></Route>
+      </Routes> */}
     </>
   )
 }
