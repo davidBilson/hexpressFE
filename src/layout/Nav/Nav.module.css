@@ -85,6 +85,9 @@
     .navLoginBtn {
         padding: 10px;
     }
+    .navLoginBtn:hover {
+        box-shadow: none;
+    }
 }
 @media screen and (max-width: 481px) {
     .navLoginBtn {
