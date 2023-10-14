@@ -1,0 +1,78 @@
+.heroSection {
+    padding:  250px 20px 100px 20px;
+    margin: auto;
+    width: 100%;
+    max-width: var(--max-width);
+}
+.heroArticle {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.heroTitle {
+    color: var(--night);
+}
+.heroTitle > span {
+    color: var(--orange) !important;
+}
+.heroForm {
+    background: var(--grey);
+    width: fit-content;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: var(--radius1);
+    width: 100%;
+    max-width: 780px;
+    height: 60px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.heroInput {
+    height: 100%;
+    background: transparent;
+    outline: none;
+    border: none;
+    padding: 0px 20px;
+    font-size: 15px;
+    width: 70%;
+}
+.heroButton {
+    height: 100%;
+    background: var(--orange);
+    outline: none;
+    border: none;
+    border-radius: var(--radius1);
+    color: var(--white);
+    padding: 0px 20px;
+    font-size: 15px;
+    font-weight: 400;
+    cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  
+}
+@media screen and (max-width: 615px) {
+    .heroSection {
+        padding:  200px 20px 100px 20px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .heroForm {
+        padding: 5px;
+        height: 50px;
+        margin-top: 20px;
+    }
+    .heroInput {
+        padding: 0px 10px;
+        font-size: 15px;
+        width: 65%;
+    }
+    .heroButton {
+        width: 35%;
+        padding: 0px;
+        font-size: 15px;
+        font-weight: 400;
+    }
+}

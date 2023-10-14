@@ -9,6 +9,7 @@
   --lightnavy: #4D4C7D;
   --grey: #F5F5F5;
   --white: #ffffff;
+  --radius1: 5px;
 }
 body {
   background: var(--white);
@@ -26,6 +27,32 @@ input, a {
   outline: none;
 }
 /* Font size */
+h1 {
+  font-size: 55px;
+  font-weight: 600;
+}
+h2 {
+  font-size: 35px;
+}
+h3 {
+  font-size: 25px;
+}
 a, p {
   font-size: 15px;
+  color: var(--night);
+}
+@media screen and (max-width: 768px) {
+  
+}
+@media screen and (max-width: 615px) {
+  h1 {
+    font-size: 35px;
+    line-height: 40px;
+  }
+}
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 30px;
+    line-height: 35px;
+  }
 }
