@@ -33,7 +33,6 @@
 .serviceItem:hover .serviceTitle, .serviceItem:hover .serviceDescription, .serviceItem:hover .serviceIcon {
     color: var(--white);
 }
-
 .serviceTitle {
     font-size: 22px;
     font-weight: 500;
