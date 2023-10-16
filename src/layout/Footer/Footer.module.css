@@ -1,0 +1,18 @@
+.footer {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 20px;
+}
+.footerSection {
+    display: flex;
+    justify-content: space-between;
+}
+.logo {}
+.footerLogo {}
+.footerIcons {}
+.footerIcon {}
+.footerLinks {}
+.footerLink {}
+.footerCopyright {}
+.footerText {}
