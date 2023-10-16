@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
-
 :root {
   --max-width: 1470px;
   --container-padding: 20px;
@@ -12,39 +11,46 @@
   --white: #ffffff;
   --radius1: 5px;
 }
+
 body {
   background: var(--white);
 }
+
 *, body {
   font-family: 'Roboto', sans-serif;
 }
+
 a {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
-}
+} 
+
 /* Outline */
 input, a {
   outline: none;
 }
+
 /* Font size */
 h1 {
   font-size: 55px;
   font-weight: 600;
 }
+
 h2 {
   font-size: 35px;
 }
+
 h3 {
   font-size: 25px;
 }
+
 a, p {
   font-size: 15px;
   color: var(--night);
 }
-@media screen and (max-width: 768px) {
-  
-}
+@media screen and (max-width: 768px) {}
+
 @media screen and (max-width: 615px) {
   h1 {
     font-size: 35px;
