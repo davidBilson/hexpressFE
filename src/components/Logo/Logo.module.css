@@ -5,6 +5,7 @@
     align-items: center;
     gap:3px;
     color: var(--night);
+    cursor: pointer;
 }
 .logo > span {
     color: var(--orange);
