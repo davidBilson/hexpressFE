@@ -4,6 +4,7 @@ import Navbar from './layout/Nav/Nav'
 import Home from './pages/Home'
 import Footer from './layout/Footer/Footer'
 import PrivacyPolicy from './pages/privacy-policy'
+import Dashboard from './pages/dashboard'
 import TermsOfService from './pages/terms-of-service'
 
 const App = () => {
