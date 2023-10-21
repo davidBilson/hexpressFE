@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import style from './Authentication.module.css'
+import style from './ResetPassword.module.css'
 
 const ResetPassword = () => {
 
