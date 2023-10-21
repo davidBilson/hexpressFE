@@ -16,6 +16,7 @@ const Login = () => {
               name="email"
               placeholder='Enter your email address'
               className={style.loginInput}
+              autoComplete='off'
             />
           </label>
           <label className={style.loginLabel}>
@@ -25,6 +26,7 @@ const Login = () => {
               name="password"
               placeholder='************'
               className={style.loginInput}
+              autoComplete='off'
             />
           </label>
           <Link to={'/reset-password'} className={style.forgotPasswordLink}>Forgot password?</Link>

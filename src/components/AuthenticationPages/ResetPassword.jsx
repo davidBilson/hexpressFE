@@ -17,6 +17,7 @@ const ResetPassword = () => {
                     name="recovery_email"
                     placeholder='Enter your email address'
                     className={style.resetPasswordInput}
+                    autoComplete='off'
                 />
             </label>
                 <button type='submit' className={style.resetPasswordButton}>
