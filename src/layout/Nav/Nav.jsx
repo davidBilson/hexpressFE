@@ -23,7 +23,7 @@ const Nav = () => {
           <Link className={style.navLink}>About Us</Link>
         </div>
         <div className={style.loginLink}>
-          <Link className={style.navLoginBtn}>Login / Sign Up</Link>
+          <Link to={'/sign-in'} className={style.navLoginBtn}>Login / Sign Up</Link>
           <div onClick={() => setShowNav(!showNav)} className={style.navIcon}>
               {showNav ? <AiOutlineClose /> : <GiHamburgerMenu />}
           </div>
