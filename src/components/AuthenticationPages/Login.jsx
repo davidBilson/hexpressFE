@@ -27,7 +27,7 @@ const Login = () => {
               className={style.loginInput}
             />
           </label>
-          <Link to={'/sign-in'} className={style.forgotPasswordLink}>Forgot password?</Link>
+          <Link to={'/reset-password'} className={style.forgotPasswordLink}>Forgot password?</Link>
           <button type='submit' className={style.loginButton}>
             Login
           </button>
