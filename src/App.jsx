@@ -1,5 +1,5 @@
-import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { React, useEffect } from 'react'
+import {Routes, Route,  useLocation} from 'react-router-dom'
 import Navbar from './layout/Nav/Nav';
 import Home from './pages/Home';
 import Footer from './layout/Footer/Footer';
@@ -9,10 +9,19 @@ import TermsOfService from './pages/terms-of-service';
 import ForgotPassword from './pages/ForgotPassword';
 import SignIn from './pages/SignIn';
 
+const ScrollToTop = () => {
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+  return null;
+};
+
 const App = () => {
   return (
     <>
       <Navbar />
+      <ScrollToTop />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/sign-in' element={<SignIn />} />
