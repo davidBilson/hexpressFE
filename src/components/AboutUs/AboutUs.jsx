@@ -1,7 +1,7 @@
 import React from 'react'
 import style from './AboutUs.module.css'
 import AboutImg from '../../assets/aboutUs.webp'
-import {FaLocationDot} from 'react-icons/fa'
+import {BiSolidBusiness, BiSolidEditLocation} from 'react-icons/bi'
 
 const AboutUs = () => {
   return (
@@ -41,10 +41,10 @@ const AboutUs = () => {
                 Our Pickup and Drop-off Locations
             </h2>
             <ul>
-                <li>
-                    <strong><FaLocationDot /> City Centers:</strong> Hexpress has strategically located centers in major city hubs, ensuring easy access and quick service in urban areas.
+                <li><BiSolidEditLocation className={style.aboutSectionIcons} />
+                    <strong> City Centers:</strong> Hexpress has strategically located centers in major city hubs, ensuring easy access and quick service in urban areas.
                 </li>
-                <li>
+                <li><BiSolidBusiness className={style.aboutSectionIcons} />
                     <strong>Business Hubs:</strong> For businesses, we offer pickup and drop-off services in prominent business districts, simplifying the shipping process.
                 </li>
                 <li>
