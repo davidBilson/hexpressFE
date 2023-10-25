@@ -1,53 +1,61 @@
 import React from 'react'
 import style from './AboutUs.module.css'
+import AboutImg from '../../assets/aboutUs.webp'
+import {FaLocationDot} from 'react-icons/fa'
 
 const AboutUs = () => {
   return (
     <main>
         <section className={style.aboutHero}>
+        <div>
+
             <h1>
                 Hexpress Delivery
             </h1>
             <p>
                 Welcome to Hexpress, where speed and simplicity converge to provide you with the fastest interstate delivery and easy pickup logistics solutions. At Hexpress, we've made it our mission to redefine the way you think about logistics. We understand that in today's fast-paced world, businesses and individuals alike require swift, efficient, and reliable transportation services that connect point A to point B seamlessly, and that's exactly what we offer.
             </p>
+        </div>
+        <div>
+            <img src={AboutImg} alt="Hexpress delivery" />
+        </div>
         </section>
-        <section>
+        <section className={style.aboutSection}>
             <h2>
-                Our Commitment to Speed:
+                Our Commitment to Speed
             </h2>
             <p>
                 We pride ourselves on being the industry leaders in speed. Whether you need to move goods, documents, or packages, we guarantee delivery within 24 hours. Our state-of-the-art logistics system and a network of strategic partners enable us to move your shipments swiftly and efficiently. When you choose Hexpress, you can trust that your time-sensitive deliveries are in the fastest hands.
             </p>
         </section>
-        <section>
+        <section className={style.aboutSection}>
             <h2>
-                Unmatched Convenience:
+                Unmatched Convenience
             </h2>
             <p>
                 Hexpress takes the hassle out of logistics. Our easy pickup and drop-off process means you can focus on your core business while we take care of the transportation. We offer pickup and drop-off locations across a wide network, making it convenient for you to access our services.
             </p>
         </section>
-        <section>
+        <section className={style.aboutSection}>
             <h2>
-                Our Pickup and Drop-off Locations:
+                Our Pickup and Drop-off Locations
             </h2>
             <ul>
                 <li>
-                    City Centers: Hexpress has strategically located centers in major city hubs, ensuring easy access and quick service in urban areas.
+                    <strong><FaLocationDot /> City Centers:</strong> Hexpress has strategically located centers in major city hubs, ensuring easy access and quick service in urban areas.
                 </li>
                 <li>
-                    Business Hubs: For businesses, we offer pickup and drop-off services in prominent business districts, simplifying the shipping process.
+                    <strong>Business Hubs:</strong> For businesses, we offer pickup and drop-off services in prominent business districts, simplifying the shipping process.
                 </li>
                 <li>
-                    Residential Areas: We extend our reach to residential neighborhoods, making it convenient for individuals to send and receive packages without leaving home.
+                    <strong>Residential Areas:</strong> We extend our reach to residential neighborhoods, making it convenient for individuals to send and receive packages without leaving home.
                 </li>
                 <li>
-                    Transportation Hubs: Our presence at transportation hubs such as airports, train stations, and bus terminals ensures seamless logistics for travelers and cargo alike.
+                    <strong>Transportation Hubs:</strong> Our presence at transportation hubs such as airports, train stations, and bus terminals ensures seamless logistics for travelers and cargo alike.
                 </li>
             </ul>
         </section>
-        <section>
+        <section className={style.aboutSection}>
             <h2>
                 Why Choose Hexpress?
             </h2>

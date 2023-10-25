@@ -2,12 +2,52 @@
     width: 100%;
     max-width: var(--max-width);
     margin: auto;
-    padding: 200px 20px 100px 20px;
+    padding: 200px 20px 40px 20px;
+    display: flex;
+    justify-content: space-between;
 }
-.aboutHero >  h1 {
+.aboutHero h1 {
     font-size: 80px;
     margin-bottom: 40px;
+    color: var(--orange);
 }
-.aboutHero > p {
+.aboutHero p {
     max-width: 1000px;
+    color: var(--night);
+}
+.aboutHero > div:nth-child(1) {
+    width: 100%;
+    max-width: 600px;
+}
+.aboutHero > div:nth-child(2) {
+    width: 100%;
+    max-width: 700px;
+    height: 500px;
+    border-radius: var(--radius2);
+    overflow: hidden;
+}
+.aboutSection {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 20px;
+}
+.aboutSection h2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--night);
+}
+.aboutSection p {
+    max-width: 1000px;
+    color: var(--night);
+}
+.aboutSection > ul {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.aboutSection > ul strong {
+    font-weight: 500;
 }
