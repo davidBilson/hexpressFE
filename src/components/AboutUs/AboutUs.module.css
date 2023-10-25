@@ -14,6 +14,7 @@
 .aboutHero p {
     max-width: 1000px;
     color: var(--night);
+    font-size: 15px;
 }
 .aboutHero > div:nth-child(1) {
     width: 100%;
@@ -41,6 +42,7 @@
 .aboutSection p {
     max-width: 1000px;
     color: var(--night);
+    font-size: 15px;
 }
 .aboutSection > ul {
     padding-left: 20px;
@@ -58,4 +60,39 @@
 }
 .aboutSectionIcons {
     color: var(--orange);
+}
+@media screen and (max-width: 480px) {
+    .aboutHero {
+        width: 100%;
+        max-width: var(--max-width);
+        margin: auto;
+        padding: 200px 20px 30px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .aboutHero h1 {
+        font-size: 30px;
+        line-height: 35px;
+        margin-bottom: 20px;
+    }
+    .aboutHero > div:nth-child(2) {
+        height: 400px;
+    }
+    .aboutSection h2 {
+        font-size: 25px;
+    }
+    .aboutSection > ul {
+        gap: 20px;
+    }
+    .aboutSection > ul li {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    .aboutSectionIcons {
+        color: var(--orange);
+        font-size: 40px;
+    }
 }

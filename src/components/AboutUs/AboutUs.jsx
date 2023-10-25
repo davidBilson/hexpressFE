@@ -2,6 +2,8 @@ import React from 'react'
 import style from './AboutUs.module.css'
 import AboutImg from '../../assets/aboutUs.webp'
 import {BiSolidBusiness, BiSolidEditLocation} from 'react-icons/bi'
+import {BsFillHouseCheckFill} from 'react-icons/bs'
+import {MdEmojiTransportation} from 'react-icons/md'
 
 const AboutUs = () => {
   return (
@@ -47,10 +49,10 @@ const AboutUs = () => {
                 <li><BiSolidBusiness className={style.aboutSectionIcons} />
                     <strong>Business Hubs:</strong> For businesses, we offer pickup and drop-off services in prominent business districts, simplifying the shipping process.
                 </li>
-                <li>
+                <li><BsFillHouseCheckFill className={style.aboutSectionIcons} />
                     <strong>Residential Areas:</strong> We extend our reach to residential neighborhoods, making it convenient for individuals to send and receive packages without leaving home.
                 </li>
-                <li>
+                <li><MdEmojiTransportation className={style.aboutSectionIcons} />
                     <strong>Transportation Hubs:</strong> Our presence at transportation hubs such as airports, train stations, and bus terminals ensures seamless logistics for travelers and cargo alike.
                 </li>
             </ul>
