@@ -15,7 +15,7 @@ const Nav = () => {
           <Logo />
         </div>
         <div className={showNav ? `${style["navLinks"]} ${style["showNav"]}` : style["navLinks"]} >
-          <Link className={style.navLink}>About Us</Link>
+          <Link to={'/about'} className={style.navLink}>About Us</Link>
           <Link className={style.navLink}>Logistic Portfolio</Link>
           <Link className={style.navLink}>Pricing</Link>
           <Link className={style.navLink}>Tracking</Link>
