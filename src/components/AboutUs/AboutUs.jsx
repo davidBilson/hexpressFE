@@ -1,17 +1,18 @@
 import React from 'react'
+import style from './AboutUs.module.css'
 
 const AboutUs = () => {
   return (
     <main>
-        <section>
+        <section className={style.aboutHero}>
             <h1>
                 Hexpress Delivery
             </h1>
+        </section>
+        <section>
             <p>
                 Welcome to Hexpress, where speed and simplicity converge to provide you with the fastest interstate delivery and easy pickup logistics solutions. At Hexpress, we've made it our mission to redefine the way you think about logistics. We understand that in today's fast-paced world, businesses and individuals alike require swift, efficient, and reliable transportation services that connect point A to point B seamlessly, and that's exactly what we offer.
             </p>
-        </section>
-        <section>
             <h2>
                 Our Commitment to Speed:
             </h2>
