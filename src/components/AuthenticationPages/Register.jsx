@@ -1,11 +1,12 @@
 import style from './Register.module.css'
+import { Link } from 'react-router-dom'
 
 const Register = () => {
   return (
     <section className={style.loginSection}>
       <div className={style.loginContainer}>
-        <h2 className={style.loginTitle}>Login to your account</h2>
-        <p className={style.loginText}>Welcome back! Please enter your details</p>
+        <h2 className={style.loginTitle}>Create a new account</h2>
+        <p className={style.loginText}>Please fill in the form below</p>
         <form className={style.loginForm}>
           <label className={style.loginLabel}>
             <span>Email Address</span>

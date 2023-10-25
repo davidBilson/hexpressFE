@@ -8,6 +8,7 @@ import Dashboard from './pages/dashboard';
 import TermsOfService from './pages/terms-of-service';
 import ForgotPassword from './pages/ForgotPassword';
 import SignIn from './pages/SignIn';
+import SignUp from './pages/SignUp';
 
 const ScrollToTop = () => {
   const location = useLocation();
@@ -25,7 +26,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/sign-in' element={<SignIn />} />
-        <Route path='/sign-up' element={<SignIn />} />
+        <Route path='/sign-up' element={<SignUp />} />
         <Route path='/reset-password' element={<ForgotPassword />} />
         <Route path='/privacy-policy' element={<PrivacyPolicy />} />
         <Route path='/dashboard' element={<Dashboard />} />
