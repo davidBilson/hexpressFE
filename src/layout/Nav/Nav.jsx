@@ -15,12 +15,12 @@ const Nav = () => {
           <Logo />
         </div>
         <div className={showNav ? `${style["navLinks"]} ${style["showNav"]}` : style["navLinks"]} >
-          <Link className={style.navLink}>Logistic Portfolio</Link>
-          <Link className={style.navLink}>Our Offices</Link>
-          <Link className={style.navLink}>Tracking</Link>
-          <Link className={style.navLink}>Pricing</Link>
-          <Link className={style.navLink}>FAQs</Link>
           <Link className={style.navLink}>About Us</Link>
+          <Link className={style.navLink}>Logistic Portfolio</Link>
+          <Link className={style.navLink}>Pricing</Link>
+          <Link className={style.navLink}>Tracking</Link>
+          <Link className={style.navLink}>Our Offices</Link>
+          <Link className={style.navLink}>FAQs</Link>
         </div>
         <div className={style.loginLink}>
           <Link to={'/sign-in'} className={style.navLoginBtn}>Login / Sign Up</Link>
