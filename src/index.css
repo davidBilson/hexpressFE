@@ -49,6 +49,9 @@ a, p {
   font-size: 15px;
   color: var(--night);
 }
+p {
+  line-height: 20px;
+}
 @media screen and (max-width: 768px) {}
 
 @media screen and (max-width: 615px) {

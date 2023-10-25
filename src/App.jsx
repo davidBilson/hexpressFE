@@ -22,7 +22,7 @@ const ScrollToTop = () => {
 const App = () => {
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <ScrollToTop />
       <Routes>
         <Route path='/' element={<Home />} />
