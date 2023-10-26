@@ -6,21 +6,24 @@ import {GiHamburgerMenu} from 'react-icons/gi'
 import {AiOutlineClose} from 'react-icons/ai'
 
 const Nav = () => {
+
     const [showNav, setShowNav] = useState(false)
+
+    const closeNav = () => setShowNav(false)
 
   return (
     <header className={style.navHeader}>
       <nav>
-        <div className={style.logo}>
+        <div className={style.logo} onClick={closeNav}>
           <Logo />
         </div>
         <div className={showNav ? `${style["navLinks"]} ${style["showNav"]}` : style["navLinks"]} >
-          <Link to={'/about'} className={style.navLink}>About Us</Link>
-          <Link className={style.navLink}>Logistic Portfolio</Link>
-          <Link className={style.navLink}>Pricing</Link>
-          <Link className={style.navLink}>Tracking</Link>
-          <Link className={style.navLink}>Our Offices</Link>
-          <Link className={style.navLink}>FAQs</Link>
+          <Link to={'/'} className={style.navLink} onClick={closeNav}>Home</Link>
+          <Link to={'/about'} className={style.navLink} onClick={closeNav}>About Us</Link>
+          <Link className={style.navLink} onClick={closeNav}>Logistic Portfolio</Link>
+          <Link className={style.navLink} onClick={closeNav}>Pricing</Link>
+          <Link className={style.navLink} onClick={closeNav}>Tracking</Link>
+          <Link className={style.navLink} onClick={closeNav}>Our Offices</Link>
         </div>
         <div className={style.loginLink}>
           <Link to={'/sign-in'} className={style.navLoginBtn}>Login / Sign Up</Link>

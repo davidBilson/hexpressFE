@@ -7,7 +7,7 @@ import {MdEmojiTransportation} from 'react-icons/md'
 
 const AboutUs = () => {
   return (
-    <main>
+    <main className={style.aboutMain}>
         <section className={style.aboutHero}>
         <div>
 
