@@ -53,6 +53,30 @@
     color: var(--white);
     cursor: pointer;
 }
+.googleLoginButton {
+    border-radius: var(--radius1);
+    padding: 12px;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    font-size: 15px;
+    background: var(--white);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    color: var(--night);
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.googleLoginIcon {
+    font-size: 22px;
+}
+.optionDeclare {
+    text-align: center;
+    padding: 20px 0;
+}
 .signUp {
     margin-top: 30px;
     font-size: 15px;

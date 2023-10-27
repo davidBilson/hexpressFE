@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { googleLogout, useGoogleLogin } from '@react-oauth/google';
+import axios from 'axios';
 import style from './Login.module.css';
 import {Link} from 'react-router-dom'
+import {FcGoogle} from 'react-icons/fc'
 
 const Login = () => {
+  const [ user, setUser ] = useState([]);
+    const [ profile, setProfile ] = useState([]);
+
+    const login = useGoogleLogin({
+        onSuccess: (codeResponse) => setUser(codeResponse),
+        onError: (error) => console.log('Login Failed:', error)
+    });
   return (
     <section className={style.loginSection}>
       <div className={style.loginContainer}>
@@ -34,6 +44,10 @@ const Login = () => {
             Login
           </button>
         </form>
+        <p className={style.optionDeclare}>or</p>
+        <button type='submit' onClick={() => login()} className={style.googleLoginButton}>
+            Continue with Google <FcGoogle className={style.googleLoginIcon} />
+          </button>
         <p className={style.signUp} >Don't have an account? &nbsp;
           <Link to={'/sign-up'} className={style.signUpLink}>Sign up</Link>
         </p>
