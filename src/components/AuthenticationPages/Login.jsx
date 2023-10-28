@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-// import { googleLogout, useGoogleLogin } from "@react-oauth/google";
+import { googleLogout, useGoogleLogin } from "@react-oauth/google";
 import style from "./Login.module.css";
 import { Link } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
@@ -7,20 +7,14 @@ import { FcGoogle } from "react-icons/fc";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const login = useGoogleLogin({
+    onSuccess: (codeResponse) => console.log(codeResponse),
+    onError: (error) => console.log("Login Failed:", error),
+  });
 
   const handleLogin = () => {
-    // Validate the input fields
     if (!email || !password) {
-      // Display an error message
-      return;
     }
-
-    // Show a loading spinner
-    // ...
-
-    // Log in the user
-    // login();
   };
 
   return (
@@ -69,6 +63,7 @@ const Login = () => {
         <p className={style.optionDeclare}>or</p>
         <button
           type="submit"
+          onClick={() => login()}
           className={style.googleLoginButton}
         >
           Continue with Google <FcGoogle className={style.googleLoginIcon} />
