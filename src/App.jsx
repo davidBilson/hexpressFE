@@ -1,5 +1,5 @@
 import { React, useEffect } from 'react'
-import {Routes, Route,  useLocation} from 'react-router-dom'
+import {Routes, Route,  useLocation, Navigate} from 'react-router-dom'
 import Navbar from './layout/Nav/Nav';
 import Home from './pages/Home';
 import Footer from './layout/Footer/Footer';
@@ -19,6 +19,8 @@ const ScrollToTop = () => {
   return null;
 };
 
+const user = false
+
 const App = () => {
   return (
     <>
@@ -31,7 +33,8 @@ const App = () => {
         <Route path='/sign-up' element={<SignUp />} />
         <Route path='/reset-password' element={<ForgotPassword />} />
         <Route path='/privacy-policy' element={<PrivacyPolicy />} />
-        <Route path='/dashboard' element={<Dashboard />} />
+        {/* To see the dashboard, user must be logged in */}
+        <Route path='/dashboard' element={user ? <Dashboard /> : <Navigate to={'/sign-in'} />} />
         <Route path='/terms-of-service' element={<TermsOfService />} />
       </Routes>
       <Footer />
