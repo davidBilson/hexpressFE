@@ -1,5 +1,5 @@
-import { React, useEffect } from 'react'
-import {Routes, Route,  useLocation, Navigate} from 'react-router-dom'
+import React, { useEffect, useState } from 'react';
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import Navbar from './layout/Nav/Nav';
 import Home from './pages/Home';
 import Footer from './layout/Footer/Footer';
@@ -10,6 +10,7 @@ import ForgotPassword from './pages/ForgotPassword';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import About from './pages/About';
+import axios from 'axios';
 
 const ScrollToTop = () => {
   const location = useLocation();
@@ -19,9 +20,39 @@ const ScrollToTop = () => {
   return null;
 };
 
-const user = false;
-
 const App = () => {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const getUser = () => {
+      axios
+        .get("http://localhost:5000/auth/login/success", {
+          credentials: "include",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Credentials": true,
+          },
+        })
+        .then((res) => {
+          if (res.status === 200) {
+            return res.json();
+          } else {
+            throw new Error("Authentication failed");
+          }
+        })
+        .then((resObject) => {
+          setUser(resObject.user);
+        })
+        .catch((err) => {
+          console.log(err);
+          console.log("probably not working... geez man!")
+        });
+    };
+
+    getUser();
+  }, []);
+
   return (
     <>
       <Navbar user={user} />
@@ -33,13 +64,16 @@ const App = () => {
         <Route path='/sign-up' element={<SignUp />} />
         <Route path='/reset-password' element={<ForgotPassword />} />
         <Route path='/privacy-policy' element={<PrivacyPolicy />} />
-        {/* To see the dashboard, user must be logged in */}
-        <Route path='/dashboard' element={user ? <Dashboard /> : <Navigate to={'/sign-in'} />} />
+        {/* To see the dashboard, the user must be logged in */}
+        <Route
+          path='/dashboard'
+          element={user ? <Dashboard /> : <Navigate to={'/sign-in'} />}
+        />
         <Route path='/terms-of-service' element={<TermsOfService />} />
       </Routes>
       <Footer />
     </>
   );
-}
+};
 
 export default App;

@@ -27,10 +27,7 @@ const Nav = ({user}) => {
         </div>
         <div className={style.loginLink}>
           {user ? 
-            (<div>
-              <img src="" alt="user profile" />
-              <span>User Name</span>
-            </div>)
+            (<Link to={'/dashboard'} className={style.navLoginBtn}>Go to Dashboard</Link>)
             :
             (<Link to={'/sign-in'} className={style.navLoginBtn}>Login / Sign Up</Link>)
           }
