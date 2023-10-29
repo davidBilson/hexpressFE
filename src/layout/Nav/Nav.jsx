@@ -5,7 +5,7 @@ import style from './Nav.module.css';
 import {GiHamburgerMenu} from 'react-icons/gi'
 import {AiOutlineClose} from 'react-icons/ai'
 
-const Nav = () => {
+const Nav = ({user}) => {
 
     const [showNav, setShowNav] = useState(false)
 
@@ -26,7 +26,14 @@ const Nav = () => {
           <Link className={style.navLink} onClick={closeNav}>Our Offices</Link>
         </div>
         <div className={style.loginLink}>
-          <Link to={'/sign-in'} className={style.navLoginBtn}>Login / Sign Up</Link>
+          {user ? 
+            (<div>
+              <img src="" alt="user profile" />
+              <span>User Name</span>
+            </div>)
+            :
+            (<Link to={'/sign-in'} className={style.navLoginBtn}>Login / Sign Up</Link>)
+          }
           <div onClick={() => setShowNav(!showNav)} className={style.navIcon}>
               {showNav ? <AiOutlineClose /> : <GiHamburgerMenu />}
           </div>

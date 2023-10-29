@@ -19,12 +19,12 @@ const ScrollToTop = () => {
   return null;
 };
 
-const user = false
+const user = false;
 
 const App = () => {
   return (
     <>
-      <Navbar />
+      <Navbar user={user} />
       <ScrollToTop />
       <Routes>
         <Route path='/' element={<Home />} />
