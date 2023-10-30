@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import style from './SideBar.module.css'
 import {NavLink} from 'react-router-dom'
-import {BiHome, BiPowerOff} from 'react-icons/bi'
+import {BiHome} from 'react-icons/bi'
+import {GiPowerButton} from 'react-icons/gi'
 import {BsBagDash} from 'react-icons/bs'
 import {LiaHistorySolid} from 'react-icons/lia'
 import {AiOutlineWallet} from 'react-icons/ai'
@@ -32,7 +33,7 @@ const SideBar = ({userName}) => {
 
   return (
     <div className={style.sideBar}>
-      <p className={style.sideBarName}>Good {timeOfDay} {userName}</p>
+      <p className={style.sideBarName}>Good {timeOfDay}, <br /> {userName}</p>
       <nav className={style.sideBarNav}>
         <NavLink><BiHome size={16} /> Dashboard</NavLink>
         <NavLink><BsBagDash size={16} /> Orders</NavLink>
@@ -40,7 +41,7 @@ const SideBar = ({userName}) => {
         <NavLink><AiOutlineWallet size={16} /> Wallet</NavLink>
       </nav>
       <div>
-        <p onClick={logout}><BiPowerOff size={16} /> Logout</p>
+        <p className={style.logout} onClick={logout}><GiPowerButton /> Logout</p>
       </div>
     </div>
   );

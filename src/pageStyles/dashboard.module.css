@@ -3,4 +3,10 @@
     width: 100%;
     max-width: var(--max-width);
     margin: auto;
+    display: flex;
+    gap: 20px;
+}
+.dashboardSectionSection {
+    border: 1px solid var(--darkgrey);
+    width: 100%;
 }

@@ -1,0 +1,38 @@
+/* These class names are based on the provided code and using CSS modules */
+.dashboardContainer {
+    display: flex;
+    padding: 20px;
+  }
+  
+  .dashboardTitle {
+    /* Styles for the title paragraph */
+  }
+  
+  .tracking {
+    /* Styles for the span element within the title */
+  }
+  
+  .trackingInputs {
+    /* Styles for the div containing tracking inputs */
+  }
+  
+  .trackingInput {
+    /* Styles for the tracking input field */
+  }
+  
+  .trackButton {
+    /* Styles for the "Track Parcel" submit button */
+  }
+  
+  buttonsContainer {
+    /* Styles for the container div for buttons */
+  }
+  
+  notificationsButton {
+    /* Styles for the notifications button */
+  }
+  
+  profileButton {
+    /* Styles for the profile button */
+  }
+  
