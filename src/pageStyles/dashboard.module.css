@@ -1,0 +1,6 @@
+.dashboardSection {
+    padding: 123px 20px 60px 20px;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: auto;
+}

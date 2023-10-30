@@ -12,6 +12,16 @@ import SignUp from './pages/SignUp';
 import About from './pages/About';
 import axios from 'axios';
 
+// Create a custom Axios instance with credentials configuration
+const axiosWithCredentials = axios.create({
+  withCredentials: true, // Include credentials with each request
+  headers: {
+    Accept: 'application/json',
+    'Content-Type': 'application/json',
+    "Access-Control-Allow-Credentials": true
+  },
+});
+
 const ScrollToTop = () => {
   const location = useLocation();
   useEffect(() => {
@@ -21,33 +31,25 @@ const ScrollToTop = () => {
 };
 
 const App = () => {
-  const [user, setUser] = useState(null);
+  // const [user, setUser] = useState(null);
+  const [user, setUser] = useState(true);
+  const [userName, setUserName] = useState("")
 
   useEffect(() => {
-    const getUser = () => {
-      axios
-        .get("http://localhost:5000/auth/login/success", {
-          credentials: "include",
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-            "Access-Control-Allow-Credentials": true,
-          },
-        })
-        .then((res) => {
-          if (res.status === 200) {
-            return res.json();
-          } else {
-            throw new Error("Authentication failed");
-          }
-        })
-        .then((resObject) => {
+    const getUser = async () => {
+      try {
+         const response = await axiosWithCredentials.get("http://localhost:5000/auth/login/success");
+
+        if (response.status === 200) {
+          const resObject = response.data;
           setUser(resObject.user);
-        })
-        .catch((err) => {
-          console.log(err);
-          console.log("probably not working... geez man!")
-        });
+          setUserName(user.displayName);
+        } else {
+          throw new Error("Authentication failed");
+        }
+      } catch (err) {
+        console.log(err, " Unable to authenticate user");
+      }
     };
 
     getUser();
@@ -64,10 +66,9 @@ const App = () => {
         <Route path='/sign-up' element={<SignUp />} />
         <Route path='/reset-password' element={<ForgotPassword />} />
         <Route path='/privacy-policy' element={<PrivacyPolicy />} />
-        {/* To see the dashboard, the user must be logged in */}
         <Route
           path='/dashboard'
-          element={user ? <Dashboard /> : <Navigate to={'/sign-in'} />}
+          element={user ? <Dashboard userName={userName} /> : <Navigate to={'/sign-in'} />}
         />
         <Route path='/terms-of-service' element={<TermsOfService />} />
       </Routes>

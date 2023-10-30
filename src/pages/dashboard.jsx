@@ -1,8 +1,14 @@
 import React from 'react'
+import SideBar from '../components/UserDashboard/SideBAr'
+import style from '../pageStyles/dashboard.module.css'
 
-const Dashboard = () => {
+const Dashboard = ({userName}) => {
+
   return (
-    <div>Dashboard</div>
+    <section className={style.dashboardSection}>
+      <SideBar userName={userName} />
+      <section></section>
+    </section>
   )
 }
 

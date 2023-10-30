@@ -1,0 +1,31 @@
+.sideBar {
+    border: 1px solid var(--grey);
+    width: 100%;
+    max-width: 200px;
+    color: var(--night);
+    font-weight: 400;
+    padding: 20px 0;
+}
+.sideBarName {
+    padding: 20px;
+}
+.sideBarNav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 70px 20px;
+    border-bottom: 1px solid var(--grey);
+}
+.sideBarNav > a {
+    padding: 8px;
+    width: 100%;
+    max-width: 120px;
+    border-radius: var(--radius1);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.sideBarNav > a:hover {
+    background: var(--orange);
+    color: var(--grey);
+}
