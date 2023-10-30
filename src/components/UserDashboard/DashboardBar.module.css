@@ -1,38 +1,64 @@
-/* These class names are based on the provided code and using CSS modules */
 .dashboardContainer {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
     padding: 20px;
+    border-bottom: 1px solid var(--darkgrey);
   }
-  
   .dashboardTitle {
-    /* Styles for the title paragraph */
+    color: var(--orange);
+    font-weight: 500;
   }
-  
   .tracking {
-    /* Styles for the span element within the title */
+    color: var(--night);
   }
-  
   .trackingInputs {
-    /* Styles for the div containing tracking inputs */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    outline: none;
   }
-  
   .trackingInput {
-    /* Styles for the tracking input field */
+    padding: 10px;
+    background: var(--grey);
+    border: 1px solid var(--darkgrey);
+    border-radius: var(--radius1);
+    color: var(--night);
+    outline: none;
+    width: 500px;
   }
-  
   .trackButton {
-    /* Styles for the "Track Parcel" submit button */
+    width: fit-content;
+    padding: 10px 15px;
+    background: transparent;
+    border: 1px solid var(--orange);
+    border-radius: var(--radius1);
+    color: var(--orange);
+    transition: .3s ease-in-out;
+    cursor: pointer;
   }
-  
-  buttonsContainer {
-    /* Styles for the container div for buttons */
+  .trackButton:hover {
+    background: var(--orange);
+    color: var(--grey);
   }
-  
-  notificationsButton {
-    /* Styles for the notifications button */
+  .buttonsContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
-  
-  profileButton {
-    /* Styles for the profile button */
+  .notificationsButton {
+    font-size: 22px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: var(--night);
   }
-  
+  .profileButton {
+    font-size: 22px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: var(--night);
+  }

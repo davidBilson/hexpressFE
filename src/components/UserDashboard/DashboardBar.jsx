@@ -11,7 +11,7 @@ const DashboardBar = () => {
         </p>
         <div className={style.trackingInputs}>
           <input className={style.trackingInput} type="text" placeholder="Enter Tracking Number" />
-          <input className={style.trackButton} type="submit" value={"Track Parcel"} />
+          <input className={style.trackButton} type="submit" value={"Track Parcel"} onClick={() => alert("clicked")} />
         </div>
         <div className={style.buttonsContainer}>
           <button className={style.notificationsButton}>
