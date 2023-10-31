@@ -2,6 +2,7 @@ import React from 'react'
 import SideBar from '../components/UserDashboard/SideBAr'
 import style from '../pageStyles/dashboard.module.css'
 import DashboardBar from '../components/UserDashboard/DashboardBar'
+import DashboardHeader from '../components/UserDashboard/DashboardHeader'
 
 const Dashboard = ({userName}) => {
 
@@ -10,6 +11,7 @@ const Dashboard = ({userName}) => {
       <SideBar userName={userName} />
       <section className={style.dashboardSectionSection} >
         <DashboardBar />
+        <DashboardHeader />
       </section>
     </section>
   )
