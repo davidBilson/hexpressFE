@@ -31,8 +31,8 @@ const ScrollToTop = () => {
 };
 
 const App = () => {
-  // const [user, setUser] = useState(null);
-  const [user, setUser] = useState(true);
+  const [user, setUser] = useState(null);
+ 
   const [userName, setUserName] = useState("")
 
   useEffect(() => {
