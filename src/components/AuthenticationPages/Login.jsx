@@ -9,7 +9,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
 
   const googleLogin = () => {
-    window.open("http://localhost:5000/auth/google", "_self")
+    window.open("https://hexpress.onrender.com/auth/google", "_self")
   }
 
   const handleLogin = () => {
