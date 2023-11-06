@@ -1,5 +1,5 @@
 import React from 'react'
-import SideBar from '../components/UserDashboard/SideBAr'
+import SideBar from '../components/UserDashboard/SideBar'
 import style from '../pageStyles/dashboard.module.css'
 import DashboardBar from '../components/UserDashboard/DashboardBar'
 import DashboardHeader from '../components/UserDashboard/DashboardHeader'
