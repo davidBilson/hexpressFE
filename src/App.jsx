@@ -38,7 +38,7 @@ const App = () => {
   useEffect(() => {
     const getUser = async () => {
       try {
-         const response = await axiosWithCredentials.get("http://localhost:5000/auth/login/success");
+         const response = await axiosWithCredentials.get("https://hexpress.onrender.com/auth/login/success");
 
         if (response.status === 200) {
           const resObject = response.data;
