@@ -39,7 +39,8 @@ const App = () => {
     const getUser = async () => {
       try {
          const response = await axiosWithCredentials.get("https://hexpress.onrender.com/auth/login/success");
-
+         console.log(response)
+         
         if (response.status === 200) {
           const resObject = response.data;
           setUser(resObject.user);
