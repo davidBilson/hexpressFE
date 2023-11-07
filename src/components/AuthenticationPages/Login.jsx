@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-// import { googleLogout, useGoogleLogin } from "@react-oauth/google";
+import { useState } from "react";
 import style from "./Login.module.css";
 import { Link } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
@@ -78,5 +77,4 @@ const Login = () => {
     </section>
   );
 };
-
 export default Login;

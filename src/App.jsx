@@ -32,7 +32,6 @@ const ScrollToTop = () => {
 
 const App = () => {
   const [user, setUser] = useState(null);
- 
   const [userName, setUserName] = useState("")
 
   useEffect(() => {
@@ -52,7 +51,6 @@ const App = () => {
         console.log(err, " Unable to authenticate user");
       }
     };
-
     getUser();
   }, []);
 
