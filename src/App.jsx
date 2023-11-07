@@ -34,25 +34,25 @@ const App = () => {
   const [user, setUser] = useState(null);
   const [userName, setUserName] = useState("")
 
-  useEffect(() => {
-    const getUser = async () => {
-      try {
-         const response = await axiosWithCredentials.get("https://hexpress.onrender.com/auth/login/success");
-         console.log(response)
+  // useEffect(() => {
+  //   const getUser = async () => {
+  //     try {
+  //        const response = await axiosWithCredentials.get("https://hexpress.onrender.com/auth/login/success");
+  //        console.log(response)
          
-        if (response.status === 200) {
-          const resObject = response.data;
-          setUser(resObject.user);
-          setUserName(user.displayName);
-        } else {
-          throw new Error("Authentication failed");
-        }
-      } catch (err) {
-        console.log(err, " Unable to authenticate user");
-      }
-    };
-    getUser();
-  }, []);
+  //       if (response.status === 200) {
+  //         const resObject = response.data;
+  //         setUser(resObject.user);
+  //         setUserName(user.displayName);
+  //       } else {
+  //         throw new Error("Authentication failed");
+  //       }
+  //     } catch (err) {
+  //       console.log(err, " Unable to authenticate user");
+  //     }
+  //   };
+  //   getUser();
+  // }, []);
 
   return (
     <>
