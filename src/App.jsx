@@ -12,16 +12,6 @@ import SignUp from './pages/SignUp';
 import About from './pages/About';
 import axios from 'axios';
 
-// Create a custom Axios instance with credentials configuration
-const axiosWithCredentials = axios.create({
-  withCredentials: true, // Include credentials with each request
-  headers: {
-    Accept: 'application/json',
-    'Content-Type': 'application/json',
-    "Access-Control-Allow-Credentials": true
-  },
-});
-
 const ScrollToTop = () => {
   const location = useLocation();
   useEffect(() => {
@@ -31,28 +21,25 @@ const ScrollToTop = () => {
 };
 
 const App = () => {
+  
   const [user, setUser] = useState(null);
   const [userName, setUserName] = useState("")
 
-  // useEffect(() => {
-  //   const getUser = async () => {
-  //     try {
-  //        const response = await axiosWithCredentials.get("https://hexpress.onrender.com/auth/login/success");
-  //        console.log(response)
-         
-  //       if (response.status === 200) {
-  //         const resObject = response.data;
-  //         setUser(resObject.user);
-  //         setUserName(user.displayName);
-  //       } else {
-  //         throw new Error("Authentication failed");
-  //       }
-  //     } catch (err) {
-  //       console.log(err, " Unable to authenticate user");
-  //     }
-  //   };
-  //   getUser();
-  // }, []);
+  const getUser = async () => {
+    try {
+      const url = "https://hexpress.onrender.com/auth/login/success"
+       const {data} = await axios.get(url, { withCredentials: true});
+       console.log(data)
+        setUser(data.user._json);
+        // setUserName(user.displayName);
+    } catch (err) {
+      console.log(err, " Unable to authenticate user");
+    }
+  };
+
+  useEffect(() => {
+    getUser();
+  }, []);
 
   return (
     <>
