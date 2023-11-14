@@ -8,7 +8,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
 
   const googleLogin = () => {
-    window.open("https://hexpress.onrender.com/auth/google", "_self")
+    window.open("http://localhost:5000/auth/google", "_self")
   }
 
   const handleLogin = () => {
@@ -60,6 +60,7 @@ const Login = () => {
           </button>
         </form>
         <p className={style.optionDeclare}>or</p>
+        
         <button
           type="submit"
           onClick={googleLogin}
@@ -67,6 +68,7 @@ const Login = () => {
         >
           Continue with Google <FcGoogle className={style.googleLoginIcon} />
         </button>
+
         <p className={style.signUp}>
           Don't have an account? &nbsp;
           <Link to={"/sign-up"} className={style.signUpLink}>
@@ -77,4 +79,5 @@ const Login = () => {
     </section>
   );
 };
+
 export default Login;

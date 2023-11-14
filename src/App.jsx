@@ -21,25 +21,25 @@ const ScrollToTop = () => {
 };
 
 const App = () => {
-  
   const [user, setUser] = useState(null);
   const [userName, setUserName] = useState("")
 
-  const getUser = async () => {
-    try {
-      const url = "https://hexpress.onrender.com/auth/login/success"
-       const {data} = await axios.get(url, { withCredentials: true});
-       console.log(data)
-        setUser(data.user._json);
-        // setUserName(user.displayName);
-    } catch (err) {
-      console.log(err, " Unable to authenticate user");
-    }
-  };
-
   useEffect(() => {
-    getUser();
-  }, []);
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('http://localhost:5000/auth/getCurrentUser', {
+          withCredentials: true, // Include credentials for CORS
+        });
+        console.log(response)
+        
+      } catch (error) {
+        console.error('Error fetching user details:', error);
+      }
+    };
+
+    fetchData();
+    
+  }, []); // Run this effect only once when the component mounts
 
   return (
     <>
