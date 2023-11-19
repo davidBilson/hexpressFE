@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import Navbar from './layout/Nav/Nav';
 import Home from './pages/Home';
@@ -11,6 +11,10 @@ import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import About from './pages/About';
 import axios from 'axios';
+import useStore from './store/useStore';
+import { Tooltip } from 'react-tooltip'
+import { ToastContainer} from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 const ScrollToTop = () => {
   const location = useLocation();
@@ -21,8 +25,11 @@ const ScrollToTop = () => {
 };
 
 const App = () => {
-  const [user, setUser] = useState(null);
-  const [userName, setUserName] = useState("")
+
+  // states from zustand
+  // instead of using object destructuring to import state from zustand, do it this way so as to access the latest update of the state
+  const user = useStore((initialState) => initialState.user)
+  const userName = useStore((initialState) => initialState.userName)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -43,7 +50,17 @@ const App = () => {
 
   return (
     <>
-      <Navbar user={user} />
+      <Tooltip id="my-tooltip" style={{
+          zIndex: "500", 
+          background: "darkslategrey", 
+          padding: "4px", 
+          color: "lightgrey", 
+          fontSize: "10px",
+          boxShadow: "0px 0px 5px lightgrey"
+        }}
+      />
+      <ToastContainer />
+      <Navbar />
       <ScrollToTop />
       <Routes>
         <Route path='/' element={<Home />} />
@@ -54,7 +71,7 @@ const App = () => {
         <Route path='/privacy-policy' element={<PrivacyPolicy />} />
         <Route
           path='/dashboard'
-          element={user ? <Dashboard userName={userName} /> : <Navigate to={'/sign-in'} />}
+          element={user ? <Dashboard /> : <Navigate to={'/sign-in'} />}
         />
         <Route path='/terms-of-service' element={<TermsOfService />} />
       </Routes>

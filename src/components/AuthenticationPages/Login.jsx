@@ -23,7 +23,7 @@ const Login = () => {
         <p className={style.loginText}>
           Welcome back! Please enter your details
         </p>
-        <form className={style.loginForm}>
+        <form className={style.loginForm} autoComplete="off">
           <label className={style.loginLabel}>
             <span>Email Address</span>
             <input
@@ -31,7 +31,7 @@ const Login = () => {
               name="email"
               placeholder="Enter your email address"
               className={style.loginInput}
-              autoComplete="off"
+              autoComplete="none"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />

@@ -4,26 +4,30 @@ import { Link } from 'react-router-dom';
 import style from './Nav.module.css';
 import {GiHamburgerMenu} from 'react-icons/gi'
 import {AiOutlineClose} from 'react-icons/ai'
+import useStore from '../../store/useStore';
 
-const Nav = ({user}) => {
+const Nav = () => {
 
-    const [showNav, setShowNav] = useState(false)
+    // states from zustand
+    const user = useStore((initialState) => initialState.user)
 
-    const closeNav = () => setShowNav(false)
+    const [showNav, setShowNav] = useState(false);
+
+    const closeNavigationBar = () => setShowNav(false);
 
   return (
     <header className={style.navHeader}>
       <nav>
-        <div className={style.logo} onClick={closeNav}>
+        <div className={style.logo} onClick={closeNavigationBar}>
           <Logo />
         </div>
         <div className={showNav ? `${style["navLinks"]} ${style["showNav"]}` : style["navLinks"]} >
-          <Link to={'/'} className={style.navLink} onClick={closeNav}>Home</Link>
-          <Link to={'/about'} className={style.navLink} onClick={closeNav}>About Us</Link>
-          <Link className={style.navLink} onClick={closeNav}>Logistic Portfolio</Link>
-          <Link className={style.navLink} onClick={closeNav}>Pricing</Link>
-          <Link className={style.navLink} onClick={closeNav}>Tracking</Link>
-          <Link className={style.navLink} onClick={closeNav}>Our Offices</Link>
+          <Link to={'/'} className={style.navLink} onClick={closeNavigationBar}>Home</Link>
+          <Link to={'/about'} className={style.navLink} onClick={closeNavigationBar}>About Us</Link>
+          <Link className={style.navLink} onClick={closeNavigationBar}>Logistic Portfolio</Link>
+          <Link className={style.navLink} onClick={closeNavigationBar}>Pricing</Link>
+          <Link className={style.navLink} onClick={closeNavigationBar}>Tracking</Link>
+          <Link className={style.navLink} onClick={closeNavigationBar}>Our Offices</Link>
         </div>
         <div className={style.loginLink}>
           {user ? 

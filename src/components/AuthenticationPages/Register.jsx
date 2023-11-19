@@ -1,14 +1,65 @@
 import style from './Register.module.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import {FcGoogle} from 'react-icons/fc'
+import { useState } from 'react'
+import { toast } from 'react-toastify';
 
 const Register = () => {
+  // states to manage register form data
+  const [registerFormData, setRegisterFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    confirmPassword: ""
+  });
+
+  const handleChange = (e) => {
+    const {name, value} = e.target;
+    setRegisterFormData(prevData => {
+      return {
+        ...prevData,
+        [e.target.name] : e.target.value
+      }
+    })
+  }
+
+  const submitRegisterForm = async (e) => {
+    e.preventDefault();
+    if (registerFormData.password.length < 8) {
+      toast.error('Password is less than 8 characters!', {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+      setRegisterFormData(prevData => {
+        return {
+          ...prevData,
+          password: "",
+          confirmPassword: "",
+        }
+      })
+      return;
+    }
+  }
+
   return (
     <section className={style.loginSection}>
       <div className={style.loginContainer}>
         <h2 className={style.loginTitle}>Create a new account</h2>
         <p className={style.loginText}>Please fill in the form below</p>
-        <form className={style.loginForm}>
+
+        {/**** Login form ****/}
+
+        <form 
+          className={style.loginForm}
+          onSubmit={submitRegisterForm}
+        >
           <label className={style.loginLabel}>
             <span>First Name</span>
             <input
@@ -17,6 +68,8 @@ const Register = () => {
               placeholder='Enter your first name'
               className={style.loginInput}
               autoComplete='off'
+              value={registerFormData.firstName}
+              onChange={handleChange}
             />
           </label>
           <label className={style.loginLabel}>
@@ -27,6 +80,9 @@ const Register = () => {
               placeholder='Enter your last name'
               className={style.loginInput}
               autoComplete='off'
+              value={registerFormData.lastName}
+              onChange={handleChange}
+              required
             />
           </label>
           <label className={style.loginLabel}>
@@ -37,6 +93,9 @@ const Register = () => {
               placeholder='Enter your email address'
               className={style.loginInput}
               autoComplete='off'
+              value={registerFormData.email}
+              required
+              onChange={handleChange}
             />
           </label>
           <label className={style.loginLabel}>
@@ -47,6 +106,27 @@ const Register = () => {
               placeholder='************'
               className={style.loginInput}
               autoComplete='off'
+              value={registerFormData.password}
+              onChange={handleChange}
+              required
+              data-tooltip-id="my-tooltip"
+              data-tooltip-content="Password must not be less than 8 characters"
+            />
+          </label>
+          <label className={style.loginLabel}>
+            <span>Confirm password</span>
+            <input
+              required
+              type="password"
+              name="confirmPassword"
+              placeholder='************'
+              className={style.loginInput}
+              autoComplete='off'
+              value={registerFormData.confirmPassword}
+              onChange={handleChange}
+              style={{
+                border: registerFormData.confirmPassword === "" || registerFormData.password === registerFormData.confirmPassword ? "" : "1px solid red"
+              }}
             />
           </label>
           <button type='submit' className={style.loginButton}>

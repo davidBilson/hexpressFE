@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
 :root {
   --max-width: 1470px;
   --container-padding: 20px;
   --orange: #F99417;
-  --lightorange: #fff5e9;
+  --lightorange: #d1aa79;
   --night: #374151;
   --navy: #363062;
   --lightnavy: #4D4C7D;
@@ -32,6 +32,13 @@ a {
 input, a {
   outline: none;
 }
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
 /* Font size */
 h1 {
   font-size: 55px;
