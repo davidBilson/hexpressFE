@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import {FcGoogle} from 'react-icons/fc'
 import { useState } from 'react'
 import { toast } from 'react-toastify';
+import axios from 'axios'
 
 const Register = () => {
   // states to manage register form data
@@ -46,6 +47,47 @@ const Register = () => {
       })
       return;
     }
+
+    if (registerFormData.password !== registerFormData.confirmPassword) {
+      toast.error('Password does not match, retry!', {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+      return;
+    }
+
+    const firstName = registerFormData.firstName;
+    const lastName = registerFormData.lastName;
+    const email = registerFormData.email;
+    const password = registerFormData.password;
+
+    try {
+      const response = axios.post("", {
+        firstName,
+        lastName,
+        email,
+        password
+      });
+      console.log(response);
+    } catch (error) {
+      console.error(error);
+      toast.error('Login failed, please retry!', {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+    }
   }
 
   return (
@@ -53,13 +95,8 @@ const Register = () => {
       <div className={style.loginContainer}>
         <h2 className={style.loginTitle}>Create a new account</h2>
         <p className={style.loginText}>Please fill in the form below</p>
-
         {/**** Login form ****/}
-
-        <form 
-          className={style.loginForm}
-          onSubmit={submitRegisterForm}
-        >
+        <form className={style.loginForm} onSubmit={submitRegisterForm}>
           <label className={style.loginLabel}>
             <span>First Name</span>
             <input
