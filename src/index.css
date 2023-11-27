@@ -4,14 +4,17 @@
   --container-padding: 20px;
   --orange: #F99417;
   --lightorange: #d1aa79;
-  --night: #374151;
   --navy: #363062;
   --lightnavy: #4D4C7D;
   --grey: #F5F5F5;
   --darkgrey: rgba(0,0,0,0.1);
-  --white: #ffffff;
+  --night: #374151;
+  --white: white;
+  --ghostwhite: ghostwhite;
+  --theme-blue: rgb(0, 0, 170);
   --radius1: 5px;
   --radius2: 10px;
+  --radius3: 20px;
 }
 
 body {

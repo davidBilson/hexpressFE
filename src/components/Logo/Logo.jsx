@@ -8,7 +8,10 @@ const Logo = () => {
   const navigate = useNavigate()
 
   return (
-    <div onClick={() => navigate('/')} className={style.logo}>HEXPRESS<span><TbTruckDelivery /></span></div>
+    <div onClick={() => navigate('/')} className={style.logo}>
+      <span><TbTruckDelivery /></span>
+      HEXPRESS
+    </div>
   )
 }
 

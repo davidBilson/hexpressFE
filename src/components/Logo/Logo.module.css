@@ -1,13 +1,13 @@
 .logo {
-    font-weight: 900;
-    font-size: 26px;
+    font-weight: 800;
+    font-size: 36px;
     display: flex;
     align-items: center;
     gap:3px;
-    color: var(--night);
+    color: var(--theme-blue);
     cursor: pointer;
 }
 .logo > span {
-    color: var(--orange);
+    color: var(--theme-blue);
     font-weight: 900;
 }

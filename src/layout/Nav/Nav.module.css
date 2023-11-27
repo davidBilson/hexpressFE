@@ -8,6 +8,7 @@
     background: var(--white);
     position: fixed;
     top: 0;
+    background: var(--ghostwhite);
 }
 .navHeader > nav {
     width: 100%;
@@ -39,11 +40,10 @@
 }
 .navLoginBtn {
     padding: 14px 24px;
-    background: var(--orange);
+    background: white;
     border: none;
-    border: 8px;
-    color: var(--white);
-    border-radius: var(--radius1);
+    color: var(--night);
+    border-radius: var(--radius3);
     transition: .3s ease-in-out;
 }
 .navLoginBtn:hover {
@@ -73,7 +73,7 @@
         left: 0;
         width: 100%;
         max-width: 1200px;
-        background: var(--white);
+        background: var(--ghostwhite);
         z-index: 10;
         box-shadow: rgba(0, 0, 0, 0.06) 0px 3px 3px 0px;
         padding: 50px 0px;
@@ -94,7 +94,7 @@
 @media screen and (max-width: 481px) {
     .navLoginBtn {
         background: none;
-        color: var(--orange);
+        color: var(--night);
         font-weight: 500;
     }
 }
