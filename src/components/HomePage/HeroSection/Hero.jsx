@@ -1,9 +1,12 @@
 import React from 'react';
 import style from './Hero.module.css';
+import heroImage from '../../../assets/heroImage.jpg'
 
 const Hero = () => {
   return (
     <section className={style.heroSection}>
+      <div className={style.heroSectionImageContainer}>
+      </div>
       <article className={style.heroArticle}>
         <h1 className={style.heroTitle}>Fastest <span>Interstate Delivery</span> & Easy Pickup</h1>
         <p className={style.heroText}>

@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
 :root {
+  /* colors */
+  --white: white;
+  --greywhite: rgb(235, 224, 224);
+  --night: #374151;
+  --ghostwhite: whitesmoke;
+  --theme-blue: rgb(0, 23, 151);
+  --darkcyan: rgb(0, 194, 194);
+
   --max-width: 1470px;
   --container-padding: 20px;
   --orange: #F99417;
@@ -8,10 +16,6 @@
   --lightnavy: #4D4C7D;
   --grey: #F5F5F5;
   --darkgrey: rgba(0,0,0,0.1);
-  --night: #374151;
-  --white: white;
-  --ghostwhite: ghostwhite;
-  --theme-blue: rgb(0, 0, 170);
   --radius1: 5px;
   --radius2: 10px;
   --radius3: 20px;

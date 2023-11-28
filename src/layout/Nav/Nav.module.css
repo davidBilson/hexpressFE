@@ -31,7 +31,7 @@
     transition: .3s ease-in-out;
 }
 .navLink:hover {
-    color: var(--orange);
+    color: var(--theme-blue);
 }
 .loginLink {
     display: flex;
@@ -40,14 +40,16 @@
 }
 .navLoginBtn {
     padding: 14px 24px;
-    background: white;
     border: none;
-    color: var(--night);
     border-radius: var(--radius3);
     transition: .3s ease-in-out;
+    color: var(--night);
+    background: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .navLoginBtn:hover {
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    color: var(--white);
+    background: var(--theme-blue);
 }
 .navIcon {
     font-size: 25px;
@@ -93,8 +95,9 @@
 }
 @media screen and (max-width: 481px) {
     .navLoginBtn {
-        background: none;
-        color: var(--night);
         font-weight: 500;
+        color: var(--night);
+        background: none;
+        box-shadow: none;
     }
 }

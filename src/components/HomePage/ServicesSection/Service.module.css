@@ -5,49 +5,93 @@
     padding: 100px 20px;
 }
 .servicesHeader {
-    text-align: center;
     margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.servicesHeader > div:nth-child(1) {
+    width: 100%;
+    max-width: 700px;
 }
 .servicesTitle {
-    font-weight: 500;
+    font-weight: 600;
+    line-height: 60px;
+    font-size: 50px;
     color: var(--night);
     margin-bottom: 20px;
 }
+.servicesTitleSpan {
+    color: var(--theme-blue);
+}
+.servicesDescription {
+    font-size: 16px;
+    padding-top: 9px;
+    width: 100%;
+    max-width: 700px; 
+    color: var(--night);
+    line-height: 25px;
+}
 .service {
     display: flex;
-    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
 }
+.service > div:nth-child(1) {
+    background: var(--theme-blue);
+}
+.service > div:nth-child(1):hover {
+    background: var(--darkcyan);
+}
+.service > div:nth-child(2) {
+    background: var(--darkcyan);
+}
+.service > div:nth-child(2):hover {
+    background: var(--theme-blue);
+}
+.service > div:nth-child(3) {
+    background: var(--darkcyan);
+}
+.service > div:nth-child(3):hover {
+    background: var(--theme-blue);
+}
+.service > div:nth-child(4) {
+    background: var(--theme-blue);
+}
+.service > div:nth-child(4):hover {
+    background: var(--darkcyan);
+}
+
 .serviceItem {
-    width: 25%;
-    background: var(--white);
-    height: 250px;
-    border-radius: 8px;
-    border: 1px solid var(--orange);
-    padding: 40px;
+    width: 100%;
+    max-width: 700px;
+    height: 400px;
     cursor: pointer;
-    transition: .3s ease-in-out
+    transition: .3s ease-in-out;
+    color: var(--ghostwhite);
+    border-radius: 5px;
+    overflow: hidden;
 }
-.serviceItem:hover {
-    background: var(--orange);
+.serviceItem > img {
+    height: 300px;
 }
-.serviceItem:hover .serviceTitle, .serviceItem:hover .serviceDescription, .serviceItem:hover .serviceIcon {
-    color: var(--white);
+.serviceItem > div {
+    padding: 20px;
 }
 .serviceTitle {
     font-size: 22px;
     font-weight: 500;
-    color: var(--orange);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .serviceDescription {
     font-size: 15px;
-    color: var(--night);
     font-weight: 400;
     line-height: 20px;
+    color: var(--ghostwhite);
 }
 .serviceIcon {
     font-size: 50px;
-    color: var(--night);
     font-weight: 700;
 }
 

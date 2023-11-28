@@ -1,13 +1,12 @@
 .service-range {
-    background: var(--lightorange);
-    color: var(--night);
+    background: grey;
+    color: lightgrey;
   }
   .terminologies-container {
       width: 100%;
       font-size: 20px;
       margin: auto;
       overflow: hidden;
-      color: var(--night);
       height: 100%;
     }
     .terminologies {
