@@ -4,6 +4,7 @@ import {TbTruckDelivery} from 'react-icons/tb'
 import {AiOutlineShopping} from 'react-icons/ai'
 import {MdAltRoute, MdSupportAgent} from 'react-icons/md'
 import servicesImage from '../../../assets/heroImage.jpg'
+import personalShopper from '../../../assets/personalShopper.jpg'
 
 const Services = () => {
   return (
@@ -27,7 +28,7 @@ const Services = () => {
             </div>
         </div>
         <div className={style.serviceItem}>
-            <img src={servicesImage} alt="" />
+            <img src={personalShopper} alt="" />
             <div>
               <h4 className={style.serviceTitle}>Personal Shopper</h4>
               <p className={style.serviceDescription}>Request a personal shopper to ease your burden.</p>

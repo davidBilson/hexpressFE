@@ -2,9 +2,10 @@ import Logo from '../../components/Logo/Logo'
 import style from './Footer.module.css'
 import {FaFacebookSquare, FaTwitterSquare} from 'react-icons/fa'
 import { AiFillInstagram,} from 'react-icons/ai'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Footer = () => {
+    const navigate = useNavigate()
     return (
         <footer className={style.footer}>
             <section className={style.footerSection}>
@@ -19,11 +20,11 @@ const Footer = () => {
             </section>
             <section className={style.footerSection}>
                 <div className={style.footerLinks}>
-                    <span className={style.footerLink}>
-                        <Link to={'/terms-of-service'}>Terms of Service</Link>
+                    <span className={style.footerLink} onClick={() => navigate('/terms-of-service')}>
+                        Terms of Service
                     </span>
-                    <span className={style.footerLink}>
-                        <Link to={'privacy-policy'}>Privacy Policy</Link>
+                    <span className={style.footerLink} onClick={() => navigate('/privacy-policy')}>
+                        Privacy Policy
                     </span>
                     <span className={style.footerLink}>Support</span>
                     <span className={style.footerLink}>Careers</span>
