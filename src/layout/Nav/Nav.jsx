@@ -28,13 +28,13 @@ const Nav = () => {
           <Link className={style.navLink} onClick={closeNavigationBar}>Pricing</Link>
           <Link className={style.navLink} onClick={closeNavigationBar}>Tracking</Link>
           <Link className={style.navLink} onClick={closeNavigationBar}>Our Offices</Link>
+          {user ? 
+            (<Link to={'/dashboard'} onClick={closeNavigationBar} className={style.navLoginBtn}>Go to Dashboard</Link>)
+            :
+            (<Link to={'/sign-in'} onClick={closeNavigationBar} className={style.navLoginBtn}>Login / Sign Up</Link>)
+          }
         </div>
         <div className={style.loginLink}>
-          {user ? 
-            (<Link to={'/dashboard'} className={style.navLoginBtn}>Go to Dashboard</Link>)
-            :
-            (<Link to={'/sign-in'} className={style.navLoginBtn}>Login / Sign Up</Link>)
-          }
           <div onClick={() => setShowNav(!showNav)} className={style.navIcon}>
               {showNav ? <AiOutlineClose /> : <GiHamburgerMenu />}
           </div>

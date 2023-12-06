@@ -76,29 +76,50 @@
     font-weight: 400;
     cursor: pointer;
 }
-@media screen and (max-width: 768px) {
-  
+@media screen and (max-width: 1515px) {
+    .heroArticle {
+        width: 90%;
+    }  
 }
-@media screen and (max-width: 615px) {
-    .heroSection {
-        padding:  200px 20px 70px 20px;
-    }
-}
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 800px) {
     .heroForm {
         padding: 5px;
-        height: 50px;
-        margin-top: 20px;
     }
     .heroInput {
         padding: 0px 10px;
-        font-size: 15px;
-        width: 65%;
     }
     .heroButton {
-        width: 35%;
-        padding: 0px;
-        font-size: 15px;
-        font-weight: 400;
+        padding: 0px 15px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .heroTitle {
+        font-size: 40px;
+    }
+    .heroButton {
+        padding: 0px 10px;
+    } 
+}
+@media screen and (max-width: 615px) {
+    .heroArticle {
+        width: 100%;
+        padding: 50px 20px;
+        border-radius: 0px;
+    }
+    .heroTitle {
+        font-size: 35px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .heroTitle {
+        font-size: 30px;
+    }
+    .heroButton {
+        padding: 0px 8px;
+        /* width: 140px; */
+        font-size: 14px;
+    } 
+    .heroInput {
+        font-size: 14px;
     }
 }
