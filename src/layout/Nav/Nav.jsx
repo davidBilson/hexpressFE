@@ -35,7 +35,9 @@ const Nav = () => {
           }
         </div>
         <div className={style.loginLink}>
-          <div onClick={() => setShowNav(!showNav)} className={style.navIcon}>
+          <div 
+            onClick={() => setShowNav(!showNav)}
+            className={showNav? `${style["navIcon"]} ${style["navIcon2"]}` : `${style["navIcon"]}`}>
               {showNav ? <AiOutlineClose /> : <GiHamburgerMenu />}
           </div>
         </div>
