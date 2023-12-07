@@ -106,8 +106,6 @@
 @media screen and (max-width: 481px) {
     .navLoginBtn {
         font-weight: 500;
-        color: var(--night);
-        background: none;
         box-shadow: none;
     }
 }
