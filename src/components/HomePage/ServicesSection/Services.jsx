@@ -9,6 +9,7 @@ import personalShopper from '../../../assets/personalShopper.jpg'
 const Services = () => {
   return (
     <section className={style.servicesSection}>
+
       <header className={style.servicesHeader}>
         <div>
           <span></span>
@@ -16,9 +17,9 @@ const Services = () => {
         </div>
         <div>
           <p className={style.servicesDescription}>We provide fast and reliable delivery and pickup services for you at a very affordable rate. We provide fast and reliable delivery and pickup services for you at a very affordable rate We provide fast and reliable delivery and pickup services for you at a very affordable rate We provide fast and reliable delivery and pickup services for you at a very affordable rate</p>
-          
         </div>
       </header>
+
       <section className={style.service}>
         <div className={style.serviceItem}>
             <img src={servicesImage} alt="" />
