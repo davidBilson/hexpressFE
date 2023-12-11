@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import style from './Nav.module.css';
 import {GiHamburgerMenu} from 'react-icons/gi'
 import {AiOutlineClose} from 'react-icons/ai'
+import { FaArrowRightFromBracket } from "react-icons/fa6";
 import useStore from '../../store/useStore';
 
 const Nav = () => {
@@ -22,12 +23,30 @@ const Nav = () => {
           <Logo />
         </div>
         <div className={showNav ? `${style["navLinks"]} ${style["showNav"]}` : style["navLinks"]} >
-          <Link to={'/'} className={style.navLink} onClick={closeNavigationBar}>Home</Link>
-          <Link to={'/about'} className={style.navLink} onClick={closeNavigationBar}>About Us</Link>
-          <Link className={style.navLink} onClick={closeNavigationBar}>Logistic Portfolio</Link>
-          <Link className={style.navLink} onClick={closeNavigationBar}>Pricing</Link>
-          <Link className={style.navLink} onClick={closeNavigationBar}>Tracking</Link>
-          <Link className={style.navLink} onClick={closeNavigationBar}>Our Offices</Link>
+          <Link to={'/'} className={style.navLink} onClick={closeNavigationBar}>
+            <span>Home</span>
+            <span><FaArrowRightFromBracket className={style.navItemArrow} /></span>
+          </Link>
+          <Link to={'/about'} className={style.navLink} onClick={closeNavigationBar}>
+            <span>About Us</span>
+            <span><FaArrowRightFromBracket className={style.navItemArrow} /></span>
+          </Link>
+          <Link className={style.navLink} onClick={closeNavigationBar}>
+            <span>Logistic Portfolio</span>
+            <span><FaArrowRightFromBracket className={style.navItemArrow} /></span>
+          </Link>
+          <Link className={style.navLink} onClick={closeNavigationBar}>
+            <span>Pricing</span>
+            <span><FaArrowRightFromBracket className={style.navItemArrow} /></span>
+          </Link>
+          <Link className={style.navLink} onClick={closeNavigationBar}>
+            <span>Tracking</span>
+            <span><FaArrowRightFromBracket className={style.navItemArrow} /></span>
+          </Link>
+          <Link className={style.navLink} onClick={closeNavigationBar}>
+            <span>Our Offices</span>
+            <span><FaArrowRightFromBracket className={style.navItemArrow} /></span>
+          </Link>
           {user ? 
             (<Link to={'/dashboard'} onClick={closeNavigationBar} className={style.navLoginBtn}>Go to Dashboard</Link>)
             :
