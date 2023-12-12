@@ -16,7 +16,7 @@ const Services = () => {
           <h2 className={style.servicesTitle}>Your #1 Partner in Seamless <span className={style.servicesTitleSpan}>Interstate Deliveries</span></h2>
         </div>
         <div>
-          <p className={style.servicesDescription}>We provide fast and reliable delivery and pickup services for you at a very affordable rate. We provide fast and reliable delivery and pickup services for you at a very affordable rate We provide fast and reliable delivery and pickup services for you at a very affordable rate We provide fast and reliable delivery and pickup services for you at a very affordable rate</p>
+          <p className={style.servicesDescription}>Experience swift, reliable, and affordable delivery and pickup services with us. We prioritize your satisfaction, ensuring seamless interstate logistics. Trust us to be your reliable partner for efficient and cost-effective deliveries.</p>
         </div>
       </header>
 

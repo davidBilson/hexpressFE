@@ -15,6 +15,7 @@ import useStore from './store/useStore';
 import { Tooltip } from 'react-tooltip'
 import { ToastContainer} from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
+import { GiConsoleController } from 'react-icons/gi';
 
 const ScrollToTop = () => {
   const location = useLocation();
@@ -26,6 +27,11 @@ const ScrollToTop = () => {
 
 const App = () => {
 
+  const output = "what's your perfect first date?";
+  const perfectDate = output.split("").map(parseInt).filter(a => a).reduce((a, b) => a + b).toString().split("").reverse().join("")
+
+  console.log(output)
+  console.log(perfectDate)
   // states from zustand
   // instead of using object destructuring to import state from zustand, do it this way so as to access the latest update of the state
   const user = useStore((initialState) => initialState.user)
