@@ -1,5 +1,5 @@
 .aboutMain {
-    padding: 200px 0px 100px 0;
+    padding: 200px 20px 100px 20px;
 }
 .aboutHero {
     width: 100%;
@@ -40,7 +40,6 @@
     flex-direction: column;
     justify-content: center;
     margin-top: 30px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
 .aboutSection:nth-of-type(2) {
@@ -105,12 +104,17 @@
 .aboutSectionIcons {
     color: var(--darkcyan);
 }
+@media screen and (max-width: 1200px) {
+    .aboutHero {
+        gap: 20px;
+        padding: 0px;
+    }
+}
 @media screen and (max-width: 1024px) {
     .aboutHero {
         width: 100%;
         max-width: var(--max-width);
         margin: auto;
-        padding: 0px 20px 30px 20px;
         display: flex;
         flex-direction: column;
         gap: 20px;

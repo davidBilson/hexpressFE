@@ -9,30 +9,47 @@ const AboutUs = () => {
   return (
     <main className={style.aboutMain}>
         <section className={style.aboutHero}>
-        <div>
-
-            <h1>Hexpress Delivery</h1>
-            <p>
-                Welcome to Hexpress, where speed and simplicity converge to provide you with the fastest interstate delivery and easy pickup logistics solutions. At Hexpress, we've made it our mission to redefine the way you think about logistics. We understand that in today's fast-paced world, businesses and individuals alike require swift, efficient, and reliable transportation services that connect point A to point B seamlessly, and that's exactly what we offer.
-            </p>
-        </div>
-        <div>
-            <img src={AboutImg} alt="Hexpress delivery" />
-        </div>
+            <div>
+                <h1>Hexpress Delivery</h1>
+                <p>
+                    Welcome to Hexpress, where speed and simplicity converge to provide you with the fastest interstate delivery and easy pickup logistics solutions. At Hexpress, we've made it our mission to redefine the way you think about logistics. We understand that in today's fast-paced world, businesses and individuals alike require swift, efficient, and reliable transportation services that connect point A to point B seamlessly, and that's exactly what we offer.
+                </p>
+            </div>
+            <div>
+                <img src={AboutImg} alt="Hexpress delivery" />
+            </div>
         </section>
-        <section className={style.aboutSection}>
+        <section
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="1500"
+            data-aos-delay="300"
+            data-aos-offset="0" 
+            className={style.aboutSection}>
             <h2>Our Commitment to Speed</h2>
             <p>
                 We pride ourselves on being the industry leaders in speed. Whether you need to move goods, documents, or packages, we guarantee delivery within 24 hours. Our state-of-the-art logistics system and a network of strategic partners enable us to move your shipments swiftly and efficiently. When you choose Hexpress, you can trust that your time-sensitive deliveries are in the fastest hands.
             </p>
         </section>
-        <section className={style.aboutSection}>
+        <section
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="1500"
+            data-aos-delay="300"
+            data-aos-offset="0" 
+            className={style.aboutSection}>
             <h2>Unmatched Convenience</h2>
             <p>
                 Hexpress takes the hassle out of logistics. Our easy pickup and drop-off process means you can focus on your core business while we take care of the transportation. We offer pickup and drop-off locations across a wide network, making it convenient for you to access our services.
             </p>
         </section>
-        <section className={style.aboutSection}>
+        <section
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="1500"
+            data-aos-delay="300"
+            data-aos-offset="0" 
+            className={style.aboutSection}>
             <h2>Our Pickup and Drop-off Locations</h2>
             <ul>
                 <li><BiSolidEditLocation className={style.aboutSectionIcons} />
@@ -49,7 +66,13 @@ const AboutUs = () => {
                 </li>
             </ul>
         </section>
-        <section className={style.aboutSection}>
+        <section
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="1500"
+            data-aos-delay="300"
+            data-aos-offset="0" 
+            className={style.aboutSection}>
             <h2>Why Choose Hexpress?</h2>
             <ul>
                 <li>
