@@ -8,12 +8,9 @@ import { FaArrowRightFromBracket } from "react-icons/fa6";
 import useStore from '../../store/useStore';
 
 const Nav = () => {
-
     // states from zustand
     const user = useStore((initialState) => initialState.user)
-
     const [showNav, setShowNav] = useState(false);
-
     const closeNavigationBar = () => setShowNav(false);
 
   return (
@@ -31,10 +28,6 @@ const Nav = () => {
             <span>About Us</span>
             <span><FaArrowRightFromBracket className={style.navItemArrow} /></span>
           </Link>
-          {/* <Link className={style.navLink} onClick={closeNavigationBar}>
-            <span>Logistic Portfolio</span>
-            <span><FaArrowRightFromBracket className={style.navItemArrow} /></span>
-          </Link> */}
           <Link className={style.navLink} onClick={closeNavigationBar}>
             <span>Pricing</span>
             <span><FaArrowRightFromBracket className={style.navItemArrow} /></span>

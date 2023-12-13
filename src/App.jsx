@@ -15,7 +15,8 @@ import useStore from './store/useStore';
 import { Tooltip } from 'react-tooltip'
 import { ToastContainer} from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
-import { GiConsoleController } from 'react-icons/gi';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const ScrollToTop = () => {
   const location = useLocation();
@@ -24,6 +25,14 @@ const ScrollToTop = () => {
   }, [location]);
   return null;
 };
+
+AOS.init({
+  // Global settings:
+  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+  once: false, // whether animation should happen only once - while scrolling down
+  mirror: true, // whether elements should animate out while scrolling past them
+});
 
 const App = () => {
 

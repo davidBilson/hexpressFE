@@ -11,7 +11,7 @@ const Services = () => {
     <section className={style.servicesSection}>
 
       <header className={style.servicesHeader}>
-        <div>
+        <div >
           <span></span>
           <h2 className={style.servicesTitle}>Your #1 Partner in Seamless <span className={style.servicesTitleSpan}>Interstate Deliveries</span></h2>
         </div>
@@ -21,28 +21,52 @@ const Services = () => {
       </header>
 
       <section className={style.service}>
-        <div className={style.serviceItem}>
+        <div  
+          data-aos="zoom-in"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
+          data-aos-delay="300"
+          data-aos-offset="0" 
+          className={style.serviceItem}>
             <img src={servicesImage} alt="" />
             <div>
               <h4 className={style.serviceTitle}>Ship Now</h4>
               <p className={style.serviceDescription}>Request Pick Up, Delivery or Express Drop Off.</p>
             </div>
         </div>
-        <div className={style.serviceItem}>
+        <div
+          data-aos="zoom-in"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
+          data-aos-delay="300"
+          data-aos-offset="0" 
+          className={style.serviceItem}>
             <img src={personalShopper} alt="" />
             <div>
               <h4 className={style.serviceTitle}>Personal Shopper</h4>
               <p className={style.serviceDescription}>Request a personal shopper to ease your burden.</p>
             </div>
         </div>
-        <div className={style.serviceItem}>
+        <div
+          data-aos="zoom-in"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
+          data-aos-delay="300"
+          data-aos-offset="0" 
+          className={style.serviceItem}>
             <img src={servicesImage} alt="" />
             <div>
               <h4 className={style.serviceTitle}>Shipping Routes</h4>
               <p className={style.serviceDescription}>Check all our available locations and states we deliver to.</p>
             </div>
         </div>
-        <div className={style.serviceItem}>
+        <div
+          data-aos="zoom-in"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
+          data-aos-delay="300"
+          data-aos-offset="0" 
+          className={style.serviceItem}>
             <img src={servicesImage} alt="" />
             <div>
               <h4 className={style.serviceTitle}>Contact Support Team</h4>
