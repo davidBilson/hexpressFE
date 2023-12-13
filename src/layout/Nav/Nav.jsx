@@ -31,10 +31,10 @@ const Nav = () => {
             <span>About Us</span>
             <span><FaArrowRightFromBracket className={style.navItemArrow} /></span>
           </Link>
-          <Link className={style.navLink} onClick={closeNavigationBar}>
+          {/* <Link className={style.navLink} onClick={closeNavigationBar}>
             <span>Logistic Portfolio</span>
             <span><FaArrowRightFromBracket className={style.navItemArrow} /></span>
-          </Link>
+          </Link> */}
           <Link className={style.navLink} onClick={closeNavigationBar}>
             <span>Pricing</span>
             <span><FaArrowRightFromBracket className={style.navItemArrow} /></span>

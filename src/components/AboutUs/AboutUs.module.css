@@ -12,7 +12,7 @@
 .aboutHero h1 {
     font-size: 80px;
     margin-bottom: 40px;
-    color: var(--orange);
+    color: var(--darkcyan);
 }
 .aboutHero p {
     max-width: 1000px;
@@ -33,22 +33,63 @@
 .aboutSection {
     width: 100%;
     max-width: var(--max-width);
+    height: 300px;
     margin: auto;
-    padding: 20px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.aboutSection:nth-of-type(2) {
+    background: var(--ghostwhite);
+}
+.aboutSection:nth-of-type(2) > h2 {
+    color: var(--night);
+}
+.aboutSection:nth-of-type(3) {
+    background: var(--darkcyan);
+}
+.aboutSection:nth-of-type(3) > h2 {
+    color: var(--white);
+}
+.aboutSection:nth-of-type(3) > p {
+    color: var(--white);
+}
+.aboutSection:nth-of-type(4) {
+    background: var(--theme-blue);
+}
+.aboutSection:nth-of-type(4) > h2 {
+    color: var(--white);
+}
+.aboutSection:nth-of-type(4) > ul {
+    color: var(--greywhite);
+}
+.aboutSection:nth-of-type(4) > ul strong{
+    font-weight: 500;
+    color: var(--darkcyan);
+}
+.aboutSection:nth-of-type(5) {
+    background: var(--night);
+}
+.aboutSection:nth-of-type(5) > h2 {
+    color: var(--greywhite);
+}
+.aboutSection:nth-of-type(5) > ul {
+    color: var(--greywhite);
 }
 .aboutSection h2 {
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 20px;
-    color: var(--night);
 }
 .aboutSection p {
     max-width: 1000px;
-    color: var(--night);
     font-size: 15px;
 }
 .aboutSection > ul {
-    padding-left: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -62,7 +103,7 @@
     font-weight: 500;
 }
 .aboutSectionIcons {
-    color: var(--orange);
+    color: var(--darkcyan);
 }
 @media screen and (max-width: 1024px) {
     .aboutHero {
