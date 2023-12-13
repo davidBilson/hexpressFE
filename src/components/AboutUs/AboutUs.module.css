@@ -33,7 +33,7 @@
 .aboutSection {
     width: 100%;
     max-width: var(--max-width);
-    height: 300px;
+    height: 320px;
     margin: auto;
     padding: 40px;
     display: flex;
@@ -93,10 +93,10 @@
     flex-direction: column;
     gap: 10px;
 }
-.aboutSection > ul li {
+.aboutSection > ul > li{
     display: flex;
-    align-items: center;
-    gap: 8px;
+    flex-direction: column;
+    gap: 5px;
 }
 .aboutSection > ul strong {
     font-weight: 500;
@@ -135,17 +135,9 @@
     .aboutSection h2 {
         font-size: 20px;
     }
-    .aboutSection > ul {
-        gap: 20px;
-    }
-    .aboutSection > ul li {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-    }
-    .aboutSectionIcons {
-        color: var(--orange);
-        font-size: 40px;
+}
+@media screen and (max-width: 960px) {
+    .aboutSection {
+        height: fit-content;
     }
 }

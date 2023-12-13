@@ -52,17 +52,33 @@ const AboutUs = () => {
             className={style.aboutSection}>
             <h2>Our Pickup and Drop-off Locations</h2>
             <ul>
-                <li><BiSolidEditLocation className={style.aboutSectionIcons} />
-                    <strong> City Centers:</strong> Hexpress has strategically located centers in major city hubs, ensuring easy access and quick service in urban areas.
+                <li>
+                    <span>
+                        <BiSolidEditLocation className={style.aboutSectionIcons} />
+                        <strong> City Centers</strong>
+                    </span>
+                    <span>Hexpress has strategically located centers in major city hubs, ensuring easy access and quick service in urban areas.</span>
                 </li>
-                <li><BiSolidBusiness className={style.aboutSectionIcons} />
-                    <strong>Business Hubs:</strong> For businesses, we offer pickup and drop-off services in prominent business districts, simplifying the shipping process.
+                <li>
+                    <span>
+                        <BiSolidBusiness className={style.aboutSectionIcons} />
+                        <strong> Business Hubs</strong><br />
+                    </span>
+                    <span>For businesses, we offer pickup and drop-off services in prominent business districts, simplifying the shipping process.</span>
                 </li>
-                <li><BsFillHouseCheckFill className={style.aboutSectionIcons} />
-                    <strong>Residential Areas:</strong> We extend our reach to residential neighborhoods, making it convenient for individuals to send and receive packages without leaving home.
+                <li>
+                    <span>
+                        <BsFillHouseCheckFill className={style.aboutSectionIcons} />
+                        <strong> Residential Areas</strong>
+                    </span>
+                    <span>We extend our reach to residential neighborhoods, making it convenient for individuals to send and receive packages without leaving home.</span>
                 </li>
-                <li><MdEmojiTransportation className={style.aboutSectionIcons} />
-                    <strong>Transportation Hubs:</strong> Our presence at transportation hubs such as airports, train stations, and bus terminals ensures seamless logistics for travelers and cargo alike.
+                <li>
+                    <span>
+                        <MdEmojiTransportation className={style.aboutSectionIcons} />
+                        <strong> Transportation Hubs</strong>
+                    </span>
+                    <span>Our presence at transportation hubs such as airports, train stations, and bus terminals ensures seamless logistics for travelers and cargo alike.</span>
                 </li>
             </ul>
         </section>
@@ -76,16 +92,16 @@ const AboutUs = () => {
             <h2>Why Choose Hexpress?</h2>
             <ul>
                 <li>
-                    <strong>Reliability:</strong> We are committed to the safe and secure delivery of your shipments, ensuring they reach their destination on time, every time.
+                    <strong style={{fontWeight: "700"}}>Reliability:</strong> We are committed to the safe and secure delivery of your shipments, ensuring they reach their destination on time, every time.
                 </li>
                 <li>
-                    <strong>Professional Team:</strong> Our dedicated team of logistics experts is here to assist you in finding the best solutions for your needs.
+                    <strong style={{fontWeight: "700"}}>Professional Team:</strong> Our dedicated team of logistics experts is here to assist you in finding the best solutions for your needs.
                 </li>
                 <li>
-                    <strong>Competitive Pricing:</strong> We offer cost-effective rates without compromising on the quality of service.
+                    <strong style={{fontWeight: "700"}}>Competitive Pricing:</strong> We offer cost-effective rates without compromising on the quality of service.
                 </li>
                 <li>
-                    <strong>Cutting-Edge Technology:</strong> We leverage the latest technology to streamline logistics, providing you with real-time tracking and updates.
+                    <strong style={{fontWeight: "700"}}>Cutting-Edge Technology:</strong> We leverage the latest technology to streamline logistics, providing you with real-time tracking and updates.
                 </li>
             </ul>
         </section>
