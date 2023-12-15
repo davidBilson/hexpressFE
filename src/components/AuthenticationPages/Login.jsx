@@ -24,7 +24,7 @@ const Login = () => {
   };
 
   const toastErrorProperties = {
-    position: "top-center",
+    position: "top-right",
     autoClose: 1000,
     hideProgressBar: true,
     closeOnClick: true,
@@ -34,9 +34,10 @@ const Login = () => {
     theme: "light",
     style: {
       width: '250px',
-      fontSize: '14px' // Set the width here
+      fontSize: '14px',
+      margin: "auto"
     }
-    }
+  }
 
   const handlePasswordChange = (e) => {
     // update password
