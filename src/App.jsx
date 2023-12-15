@@ -13,8 +13,8 @@ import About from './pages/About';
 import axios from 'axios';
 import useStore from './store/useStore';
 import { Tooltip } from 'react-tooltip'
-import { ToastContainer} from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
