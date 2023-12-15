@@ -15,13 +15,15 @@ const Login = () => {
 
   const [logging, setLogging] = useState(false);
 
-  const handleEmailChange = (e) => {
-    // update email
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      email: e.target.value
-    }));
-  };
+  const handleChange = (e) => {
+    const {name, value} = e.target;
+    setFormData(prevData => {
+      return {
+        ...prevData,
+        [e.target.name] : e.target.value
+      }
+    })
+  }
 
   const toastErrorProperties = {
     position: "top-right",
@@ -34,18 +36,12 @@ const Login = () => {
     theme: "light",
     style: {
       width: '250px',
-      fontSize: '14px',
-      margin: "auto"
+      fontSize: '15px',
+      margin: "auto",
+      borderRadius: "6px",
     }
   }
 
-  const handlePasswordChange = (e) => {
-    // update password
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      password: e.target.value
-    }));
-  };
 
   // add random number to input field name attribute to remove autocomplete
   const randomName = Math.random().toString(36).substring(2, 15);
@@ -104,7 +100,7 @@ const Login = () => {
               autoCorrect="off"
               spellcheck="false"
               value={formData.email}
-              onChange={handleEmailChange}
+              onChange={handleChange}
             />
           </label>
           <label className={style.loginLabel}>
@@ -116,7 +112,7 @@ const Login = () => {
               className={style.loginInput}
               autoComplete="new-password"
               value={formData.password}
-              onChange={handlePasswordChange}
+              onChange={handleChange}
             />
           </label>
           <Link to={"/reset-password"} className={style.forgotPasswordLink}>
