@@ -6,7 +6,9 @@
   --night: #374151;
   --ghostwhite: whitesmoke;
   --theme-blue: rgb(0, 18, 117);
+  --light-theme-blue: rgba(0, 18, 117, 0.1);
   --darkcyan: rgb(0, 194, 194);
+  --lightcyan: rgba(0, 194, 194, 0.1);
 
   --max-width: 1470px;
   --container-padding: 20px;

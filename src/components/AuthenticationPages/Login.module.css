@@ -34,7 +34,8 @@
     padding: 12px;
     border: none;
     outline: none;
-    border: 1px solid var(--lightorange);
+    border: 1px solid var(--theme-blue);
+    background: var(--light-theme-blue);
     border-radius: var(--radius1);
 }
 .forgotPasswordLink {
@@ -49,7 +50,7 @@
     outline: none;
     font-weight: 500;
     font-size: 15px;
-    background: var(--orange);
+    background: var(--theme-blue);
     color: var(--white);
     cursor: pointer;
 }
@@ -60,7 +61,7 @@
     outline: none;
     font-weight: 500;
     font-size: 15px;
-    background: var(--white);
+    background: var(--lightcyan);
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     color: var(--night);
     cursor: pointer;
@@ -83,6 +84,6 @@
     text-align: center;
 }
 .signUpLink {
-    color: var(--orange);
+    color: var(--theme-blue);
     text-decoration: underline;
 }

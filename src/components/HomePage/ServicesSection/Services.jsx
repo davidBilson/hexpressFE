@@ -1,9 +1,8 @@
 import React from 'react'
 import style from './Service.module.css'
-import {TbTruckDelivery} from 'react-icons/tb'
-import {AiOutlineShopping} from 'react-icons/ai'
-import {MdAltRoute, MdSupportAgent} from 'react-icons/md'
 import servicesImage from '../../../assets/heroImage.jpg'
+import servicesImage1 from '../../../assets/deliver1.jpg'
+import servicesImage2 from '../../../assets/supportteam.jpg'
 import personalShopper from '../../../assets/personalShopper.jpg'
 
 const Services = () => {
@@ -24,7 +23,7 @@ const Services = () => {
         <div  
           data-aos="zoom-in"
           data-aos-easing="linear"
-          data-aos-duration="1500"
+          data-aos-duration="1000"
           data-aos-delay="300"
           data-aos-offset="0" 
           className={style.serviceItem}>
@@ -37,7 +36,7 @@ const Services = () => {
         <div
           data-aos="zoom-in"
           data-aos-easing="linear"
-          data-aos-duration="1500"
+          data-aos-duration="1000"
           data-aos-delay="300"
           data-aos-offset="0" 
           className={style.serviceItem}>
@@ -50,11 +49,11 @@ const Services = () => {
         <div
           data-aos="zoom-in"
           data-aos-easing="linear"
-          data-aos-duration="1500"
+          data-aos-duration="1000"
           data-aos-delay="300"
           data-aos-offset="0" 
           className={style.serviceItem}>
-            <img src={servicesImage} alt="" />
+            <img src={servicesImage1} alt="" />
             <div>
               <h4 className={style.serviceTitle}>Shipping Routes</h4>
               <p className={style.serviceDescription}>Check all our available locations and states we deliver to.</p>
@@ -63,11 +62,11 @@ const Services = () => {
         <div
           data-aos="zoom-in"
           data-aos-easing="linear"
-          data-aos-duration="1500"
+          data-aos-duration="1000"
           data-aos-delay="300"
           data-aos-offset="0" 
           className={style.serviceItem}>
-            <img src={servicesImage} alt="" />
+            <img src={servicesImage2} alt="" />
             <div>
               <h4 className={style.serviceTitle}>Contact Support Team</h4>
               <p className={style.serviceDescription}>Our services are 100% guaranteed. Have any issues, contact support team here.</p>
