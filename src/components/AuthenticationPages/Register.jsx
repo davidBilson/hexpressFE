@@ -140,7 +140,7 @@ const Register = () => {
             <input
               type="password"
               name="password"
-              placeholder='************'
+              placeholder='Enter new password'
               className={style.loginInput}
               autoComplete='off'
               value={registerFormData.password}
@@ -156,17 +156,20 @@ const Register = () => {
               required
               type="password"
               name="confirmPassword"
-              placeholder='************'
+              placeholder='Confirm password'
+              data-tooltip-id="my-tooltip"
+              data-tooltip-content="Password must match"
               className={style.loginInput}
               autoComplete='off'
               value={registerFormData.confirmPassword}
               onChange={handleChange}
               style={{
-                border: registerFormData.confirmPassword === "" || registerFormData.password === registerFormData.confirmPassword ? "" : "1px solid red"
+                border: registerFormData.confirmPassword === "" || registerFormData.password === registerFormData.confirmPassword ? "" : "1px solid red",
+                background: registerFormData.confirmPassword === "" || registerFormData.password === registerFormData.confirmPassword ? "" : "var(--lightred)"
               }}
             />
           </label>
-          <button type='submit' className={style.loginButton}>
+          <button type='submit' className={style.signupButton}>
             Create account
           </button>
         </form>
