@@ -23,6 +23,21 @@ const Login = () => {
     }));
   };
 
+  const toastErrorProperties = {
+    position: "top-center",
+    autoClose: 1000,
+    hideProgressBar: true,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+    style: {
+      width: '250px',
+      fontSize: '14px' // Set the width here
+    }
+    }
+
   const handlePasswordChange = (e) => {
     // update password
     setFormData((prevFormData) => ({
@@ -56,26 +71,14 @@ const Login = () => {
       console.log(response.data);
 
       if (response.data.success === false) {
-        toast.error(response.data.message, {
-          position: "top-center",
-          autoClose: 1000,
-          hideProgressBar: true,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-          style: {
-            width: '250px',
-            fontSize: '14px' // Set the width here
-          }
-          });
+        toast.error(response.data.message, toastErrorProperties );
           setLogging(false);
       } else {
         
       }
     } catch(error) {
-        console.log(error);
+        console.log(error.message);
+        toast.error(error.message, toastErrorProperties);
         setLogging(false);
     }
   }
