@@ -7,6 +7,8 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const randomName = Math.random().toString(36).substring(2, 15);
+
   const googleLogin = () => {
     window.open("http://localhost:5000/auth/google", "_self")
   }
@@ -28,10 +30,13 @@ const Login = () => {
             <span>Email Address</span>
             <input
               type="email"
-              name="email"
+              name={`email_${randomName}`}
               placeholder="Enter your email address"
               className={style.loginInput}
-              autoComplete="none"
+              autoComplete="off"
+              id="fieldId"
+              autoCorrect="off"
+              spellcheck="false"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -40,10 +45,10 @@ const Login = () => {
             <span>Password</span>
             <input
               type="password"
-              name="password"
-              placeholder="************"
+              name={`password_${randomName}`}
+              placeholder="Enter your password"
               className={style.loginInput}
-              autoComplete="off"
+              autoComplete="new-password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
