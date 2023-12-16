@@ -15,14 +15,20 @@ const Login = () => {
 
   const [logging, setLogging] = useState(false);
 
-  const handleChange = (e) => {
-    const {name, value} = e.target;
-    setFormData(prevData => {
-      return {
-        ...prevData,
-        [e.target.name] : e.target.value
-      }
-    })
+  const handleEmailChange = (e) => {
+    // Update email in form data
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      email: e.target.value,
+    }));
+  }
+
+  const handlePasswordChange = (e) => {
+    // Update password in form data
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      password: e.target.value,
+    }));
   }
 
   const toastErrorProperties = {
@@ -100,7 +106,7 @@ const Login = () => {
               autoCorrect="off"
               spellcheck="false"
               value={formData.email}
-              onChange={handleChange}
+              onChange={handleEmailChange}
             />
           </label>
           <label className={style.loginLabel}>
@@ -112,7 +118,7 @@ const Login = () => {
               className={style.loginInput}
               autoComplete="new-password"
               value={formData.password}
-              onChange={handleChange}
+              onChange={handlePasswordChange}
             />
           </label>
           <Link to={"/reset-password"} className={style.forgotPasswordLink}>
