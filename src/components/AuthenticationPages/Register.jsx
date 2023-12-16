@@ -1,5 +1,5 @@
-import style from './Register.module.css'
-import { Link, useNavigate } from 'react-router-dom'
+import style from './Register.module.css';
+import { Link, useNavigate } from 'react-router-dom';
 import {FcGoogle} from 'react-icons/fc'
 import { useState } from 'react'
 import { toast } from 'react-toastify';
@@ -23,6 +23,23 @@ const Register = () => {
         [e.target.name] : e.target.value
       }
     })
+  }
+
+  const toastErrorProperties = {
+    position: "top-right",
+    autoClose: 1000,
+    hideProgressBar: true,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+    style: {
+      width: '250px',
+      fontSize: '15px',
+      margin: "auto",
+      borderRadius: "6px",
+    }
   }
 
   const submitRegisterForm = async (e) => {
@@ -49,16 +66,7 @@ const Register = () => {
     }
 
     if (registerFormData.password !== registerFormData.confirmPassword) {
-      toast.error('Password does not match, retry!', {
-        position: "top-center",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "colored",
-      });
+      toast.error('Password does not match, retry!', toastErrorProperties);
       return;
     }
 
@@ -77,16 +85,7 @@ const Register = () => {
       console.log(response);
     } catch (error) {
       console.error(error);
-      toast.error('Login failed, please retry!', {
-        position: "top-center",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "colored",
-      });
+      toast.error('Login failed, please retry!', toastErrorProperties);
     }
   }
 
