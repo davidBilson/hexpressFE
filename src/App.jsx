@@ -45,10 +45,9 @@ const App = () => {
   // if user state is true, set data to local storage, since local storage persists
   // if page reloads or hard reload, check if user data is available in local storage, then use that to update the user state
   useEffect(() => {
-    if (!user) {
-      
-    } else if (user) {
-      alert("user is logged in")
+    const userId = window.sessionStorage.getItem('userId');
+    if (userId) {
+      alert("user is available to be logged in")
     }
   }, [])
 

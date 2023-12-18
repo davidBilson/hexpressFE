@@ -83,6 +83,19 @@ const Login = () => {
     // store state values as new variables
     const email = formData.email;
     const password = formData.password;
+
+    if (password.length < 8) {
+      toast.error('Password is too short!', toastErrorProperties );
+      setFormData(prevData => {
+        return {
+          ...prevData,
+          password: ""
+        }
+      });
+      setProcessing(false);
+      return;
+    }
+
     // attempt to authenticate users by sending login credentials to server
     try {
       const response = await axios.post("http://localhost:5000/user/signin", {email, password});
@@ -93,6 +106,7 @@ const Login = () => {
         setUserName(response.data.userFirstName + ' ' + response.data.userLastName);
         setUserEmail(response.data.userEmail);
         setUserId(response.data.id);
+        window.sessionStorage.setItem('userId', response.data.id)
         userLoggedIn(true);
         setProcessing(false);
         navigate('/dashboard');
@@ -125,7 +139,6 @@ const Login = () => {
               autoComplete="off"
               id="fieldId"
               autoCorrect="off"
-              spellcheck="false"
               value={formData.email}
               onChange={handleEmailChange}
             />

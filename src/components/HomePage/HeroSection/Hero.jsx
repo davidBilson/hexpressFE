@@ -18,7 +18,7 @@ const Hero = () => {
             className={style.heroInput}
             placeholder="Enter Tracking Number"
           />
-          <button className={style.heroButton} type='submit'>Track Package</button>
+          <button className={style.heroButton} type='submit'>Track Parcel</button>
         </form>
       </article>
     </section>

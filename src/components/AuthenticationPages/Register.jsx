@@ -48,7 +48,7 @@ const Register = () => {
     setProcessing(true);
 
     if (registerFormData.password.length < 8) {
-      toast.error('Password is less than 8 characters!', toastErrorProperties );
+      toast.error('Password is too short!', toastErrorProperties );
       setRegisterFormData(prevData => {
         return {
           ...prevData,
