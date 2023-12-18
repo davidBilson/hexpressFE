@@ -15,18 +15,18 @@ const Register = () => {
     confirmPassword: ""
   });
 
+  const [processing, setProcessing] = useState(false);
+
   const handleChange = (e) => {
-    const {name, value} = e.target;
-    setRegisterFormData(prevData => {
-      return {
-        ...prevData,
-        [e.target.name] : e.target.value
-      }
-    })
-  }
+    const { name, value } = e.target;
+    setRegisterFormData(prevData => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
 
   const toastErrorProperties = {
-    position: "top-right",
+    position: "top-center",
     autoClose: 1000,
     hideProgressBar: true,
     closeOnClick: true,
@@ -36,37 +36,40 @@ const Register = () => {
     theme: "light",
     style: {
       width: '250px',
-      fontSize: '15px',
+      fontSize: '14px',
       margin: "auto",
       borderRadius: "6px",
     }
   }
 
+  // register user function
   const submitRegisterForm = async (e) => {
     e.preventDefault();
+    setProcessing(true);
+
     if (registerFormData.password.length < 8) {
-      toast.error('Password is less than 8 characters!', {
-        position: "top-center",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "colored",
-      });
+      toast.error('Password is less than 8 characters!', toastErrorProperties );
       setRegisterFormData(prevData => {
         return {
           ...prevData,
           password: "",
           confirmPassword: "",
         }
-      })
+      });
+      setProcessing(false);
       return;
     }
 
     if (registerFormData.password !== registerFormData.confirmPassword) {
       toast.error('Password does not match, retry!', toastErrorProperties);
+      setRegisterFormData(prevData => {
+        return {
+          ...prevData,
+          password: "",
+          confirmPassword: "",
+        }
+      });
+      setProcessing(false);
       return;
     }
 
@@ -75,8 +78,9 @@ const Register = () => {
     const email = registerFormData.email;
     const password = registerFormData.password;
 
+    // send credentials to server
     try {
-      const response = axios.post("", {
+      const response = await axios.post("http://localhost:5000/user/signup", {
         firstName,
         lastName,
         email,
@@ -85,7 +89,8 @@ const Register = () => {
       console.log(response);
     } catch (error) {
       console.error(error);
-      toast.error('Login failed, please retry!', toastErrorProperties);
+      setProcessing(false);
+      toast.error('Registration failed!', toastErrorProperties);
     }
   }
 
@@ -169,7 +174,13 @@ const Register = () => {
             />
           </label>
           <button type='submit' className={style.signupButton}>
-            Create account
+            {
+              processing ? 
+              <span className={style["loading-container"]}>
+                <span className={style["loading-message"]}>Creating your account, please wait</span>
+              </span> :
+              "Create account"
+            }
           </button>
         </form>
         <p className={style.optionDeclare}>or</p>

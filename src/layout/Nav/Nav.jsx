@@ -10,6 +10,7 @@ import useStore from '../../store/useStore';
 const Nav = () => {
     // states from zustand
     const user = useStore((initialState) => initialState.user)
+    
     const [showNav, setShowNav] = useState(false);
     const closeNavigationBar = () => setShowNav(false);
 

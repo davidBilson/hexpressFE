@@ -1,19 +1,40 @@
 import { useState } from "react";
 import style from "./Login.module.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import axios from 'axios';
 import { toast   } from 'react-toastify';
+import useStore from "../../store/useStore";
 
 
 const Login = () => {
+
+  const navigate = useNavigate()
+
+  // access states from store
+  const userName = useStore((initialState) => initialState.userName);
+  const userEmail = useStore((initialState) => initialState.userEmail);
+  const userId = useStore((initialState) => initialState.userId);
+  const user = useStore((initialState) => initialState.user)
+
+  // console.log(
+  //   "UserName:", userName,
+  //   "\nUserEmail:", userEmail,
+  //   "\nUserId:", userId,
+  //   "\nUser:", user
+  // );
+  
+  // access actions from store
+  const setUserName = useStore((initialState) => initialState.setUserName);
+  const setUserEmail = useStore((initialState) => initialState.setUserEmail);
+  const setUserId = useStore((initialState) => initialState.setUserId);
+  const userLoggedIn = useStore((initialState) => initialState.setUser);
 
   const [formData, setFormData] = useState({
     email: "",
     password: ""
   })
-
-  const [logging, setLogging] = useState(false);
+  const [processing, setProcessing] = useState(false);
 
   const handleEmailChange = (e) => {
     // Update email in form data
@@ -21,18 +42,17 @@ const Login = () => {
       ...prevFormData,
       email: e.target.value,
     }));
-  }
-
+  };
   const handlePasswordChange = (e) => {
     // Update password in form data
     setFormData((prevFormData) => ({
       ...prevFormData,
       password: e.target.value,
     }));
-  }
+  };
 
   const toastErrorProperties = {
-    position: "top-right",
+    position: "top-center",
     autoClose: 1000,
     hideProgressBar: true,
     closeOnClick: true,
@@ -42,12 +62,11 @@ const Login = () => {
     theme: "light",
     style: {
       width: '250px',
-      fontSize: '15px',
+      fontSize: '14px',
       margin: "auto",
       borderRadius: "6px",
     }
   }
-
 
   // add random number to input field name attribute to remove autocomplete
   const randomName = Math.random().toString(36).substring(2, 15);
@@ -57,32 +76,34 @@ const Login = () => {
     window.open("http://localhost:5000/auth/google", "_self")
   }
 
-  // handle login function
+  // login function
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLogging(true);
-
+    setProcessing(true);
     // store state values as new variables
     const email = formData.email;
     const password = formData.password;
-
     // attempt to authenticate users by sending login credentials to server
     try {
       const response = await axios.post("http://localhost:5000/user/signin", {email, password});
-      // check response in console
-      console.log(response)
-      console.log(response.data);
 
-      if (response.data.success === false) {
+      if (response.data.success === true) {
         toast.error(response.data.message, toastErrorProperties );
-          setLogging(false);
+        // update the user states on zustand store to true
+        setUserName(response.data.userFirstName + ' ' + response.data.userLastName);
+        setUserEmail(response.data.userEmail);
+        setUserId(response.data.id);
+        userLoggedIn(true);
+        setProcessing(false);
+        navigate('/dashboard');
       } else {
-        
+        toast.success(response.data.message, toastErrorProperties)
+        setProcessing(false);
       }
     } catch(error) {
         console.log(error.message);
-        toast.error(error.message, toastErrorProperties);
-        setLogging(false);
+        toast.error("Login failed!", toastErrorProperties);
+        setProcessing(false);
     }
   }
 
@@ -130,7 +151,7 @@ const Login = () => {
             disabled={ !formData.email || !formData.password }
           >
             {
-              logging ? 
+              processing ? 
               <span className={style["loading-container"]}>
                 <span className={style["loading-message"]}>Encrypting and validating information</span>
               </span> :

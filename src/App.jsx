@@ -36,32 +36,38 @@ AOS.init({
 
 const App = () => {
 
-  const output = "what's your perfect first date?";
-  const perfectDate = output.split("").map(parseInt).filter(a => a).reduce((a, b) => a + b).toString().split("").reverse().join("")
-
-  console.log(output)
-  console.log(perfectDate)
   // states from zustand
-  // instead of using object destructuring to import state from zustand, do it this way so as to access the latest update of the state
   const user = useStore((initialState) => initialState.user)
   const userName = useStore((initialState) => initialState.userName)
 
+  // fetch current state from store
+  // check if user state is null or true
+  // if user state is true, set data to local storage, since local storage persists
+  // if page reloads or hard reload, check if user data is available in local storage, then use that to update the user state
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get('http://localhost:5000/auth/getCurrentUser', {
-          withCredentials: true, // Include credentials for CORS
-        });
-        console.log(response)
-        
-      } catch (error) {
-        console.error('Error fetching user details:', error);
-      }
-    };
+    if (!user) {
+      
+    } else if (user) {
+      alert("user is logged in")
+    }
+  }, [])
 
-    fetchData();
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await axios.get('http://localhost:5000/auth/getCurrentUser', {
+  //         withCredentials: true, // Include credentials for CORS
+  //       });
+  //       console.log(response)
+        
+  //     } catch (error) {
+  //       console.error('Error fetching user details:', error);
+  //     }
+  //   };
+
+  //   fetchData();
     
-  }, []); // Run this effect only once when the component mounts
+  // }, []); // Run this effect only once when the component mounts
 
   return (
     <>
@@ -80,7 +86,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
-        <Route path='/sign-in' element={<SignIn />} />
+        <Route path='/sign-in' element={user === true ? <Navigate to={'/'} /> : <SignIn /> } />
         <Route path='/sign-up' element={<SignUp />} />
         <Route path='/reset-password' element={<ForgotPassword />} />
         <Route path='/privacy-policy' element={<PrivacyPolicy />} />
