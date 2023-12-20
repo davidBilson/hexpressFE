@@ -13,7 +13,7 @@ import About from './pages/About';
 import axios from 'axios';
 import useStore from './store/useStore';
 import { Tooltip } from 'react-tooltip'
-import { ToastContainer } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -35,19 +35,37 @@ AOS.init({
 });
 
 const App = () => {
-
   // states from zustand
   const user = useStore((initialState) => initialState.user)
-  const userName = useStore((initialState) => initialState.userName)
+  // access actions from store
+  const setUserName = useStore((initialState) => initialState.setUserName);
+  const setUserEmail = useStore((initialState) => initialState.setUserEmail);
+  const userLoggedIn = useStore((initialState) => initialState.setUser);
 
-  // fetch current state from store
-  // check if user state is null or true
-  // if user state is true, set data to local storage, since local storage persists
-  // if page reloads or hard reload, check if user data is available in local storage, then use that to update the user state
   useEffect(() => {
-    const userId = window.sessionStorage.getItem('userId');
+
+    const userId = window.localStorage.getItem('userId');
+
     if (userId) {
-      alert("user is available to be logged in")
+      const  fetchUserData = async (req, res) => {
+        try {
+          const response = await axios.post(`http://localhost:5000/user/getUserData/${userId}`);
+          console.log(response)
+
+          if (response.data.success === false) {
+              console.log("User not found, proceed to signup");
+          } else {
+              // Process the user data since it exists
+              userLoggedIn(true);
+              setUserName(response.data.firstName + ' ' + response.data.lastName);
+              setUserEmail(response.data.email);
+          }
+        } catch (error) {
+          console.log(error);
+        }
+      }
+
+      fetchUserData();
     }
   }, [])
 
@@ -85,7 +103,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
-        <Route path='/sign-in' element={user === true ? <Navigate to={'/'} /> : <SignIn /> } />
+        <Route path='/sign-in' element={<SignIn /> } />
         <Route path='/sign-up' element={<SignUp />} />
         <Route path='/reset-password' element={<ForgotPassword />} />
         <Route path='/privacy-policy' element={<PrivacyPolicy />} />

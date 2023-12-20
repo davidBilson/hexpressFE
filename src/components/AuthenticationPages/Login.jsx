@@ -101,17 +101,17 @@ const Login = () => {
       const response = await axios.post("http://localhost:5000/user/signin", {email, password});
 
       if (response.data.success === true) {
-        toast.error(response.data.message, toastErrorProperties );
+        userLoggedIn(true);
+        toast.success(response.data.message, toastErrorProperties );
         // update the user states on zustand store to true
         setUserName(response.data.userFirstName + ' ' + response.data.userLastName);
         setUserEmail(response.data.userEmail);
         setUserId(response.data.id);
-        window.sessionStorage.setItem('userId', response.data.id)
-        userLoggedIn(true);
+        window.localStorage.setItem('userId', response.data.id)
         setProcessing(false);
         navigate('/dashboard');
       } else {
-        toast.success(response.data.message, toastErrorProperties)
+        toast.error(response.data.message, toastErrorProperties)
         setProcessing(false);
       }
     } catch(error) {
