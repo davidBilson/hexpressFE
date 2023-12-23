@@ -17,6 +17,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Pricing from './pages/Pricing';
 
 const ScrollToTop = () => {
   const location = useLocation();
@@ -103,6 +104,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
+        <Route path="/pricing" element={<Pricing />} />
         <Route path='/sign-in' element={<SignIn /> } />
         <Route path='/sign-up' element={<SignUp />} />
         <Route path='/reset-password' element={<ForgotPassword />} />

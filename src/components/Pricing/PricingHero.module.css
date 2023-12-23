@@ -1,0 +1,40 @@
+.pricing-hero-container {
+    padding: 250px 20px 20px 20px;
+    text-align: center;
+}
+.pricing-header {
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+    font-weight: 800;
+    line-height: 70px;
+    background: -webkit-linear-gradient(
+        left,
+        var(--theme-blue),
+        var(--darkcyan)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 15px;
+}
+.pricing-text {
+    margin-bottom: 15px;
+    color: var(--night);
+}
+.pricing-unit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--night);
+}
+.pricing-unit-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.unit {
+    color: var(--darkcyan);
+    font-weight: bold;
+}
