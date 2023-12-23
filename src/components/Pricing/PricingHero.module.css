@@ -38,3 +38,12 @@
     color: var(--darkcyan);
     font-weight: bold;
 }
+.price {
+    color: var(--theme-blue);
+    font-weight: bold;
+}
+@media screen and (max-width: 480px) {
+    .pricing-header {
+        line-height: 45px;
+    }
+}

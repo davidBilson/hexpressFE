@@ -11,9 +11,12 @@ const PricingHero = () => {
       <h1 className={style["pricing-header"]} >Our pricing is simple with no hidden fees</h1>
       <p className={style["pricing-text"]}>Pricing plans suitable for every individual and businesses</p>
       <div className={style["pricing-unit"]} >
-        <p>Price / <span className={style["unit"]}>{switchUnit ? "Miles" : "Kilometer"}</span></p>
+        <p>
+          <span className={style["price"]}>Price</span>  
+          &nbsp;/&nbsp;
+          <span className={style["unit"]}>{switchUnit ? "Miles" : "Kilometer"}</span></p>
         <button className={style["pricing-unit-button"]} onClick={() => setSwitchUnit(!switchUnit)}>
-          {switchUnit ? <FaToggleOff size="20px" style={{color: "var(--darkcyan)"}} /> : <FaToggleOn size="20px" style={{color: "var(--darkcyan)"}} />}
+          {switchUnit ? <FaToggleOff size="25px" style={{color: "var(--darkcyan)"}} /> : <FaToggleOn size="25px" style={{color: "var(--darkcyan)"}} />}
         </button>
       </div>
     </section>
