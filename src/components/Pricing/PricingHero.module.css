@@ -43,6 +43,9 @@
     font-weight: bold;
 }
 @media screen and (max-width: 480px) {
+    .pricing-hero-container {
+        padding: 150px 20px 20px 20px;
+    }
     .pricing-header {
         line-height: 45px;
     }
