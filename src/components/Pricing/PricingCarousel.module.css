@@ -1,0 +1,87 @@
+.pricingCarousel {
+    padding: 50px 20px;
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+  }
+  
+  .pricingContainer {
+    border-radius: var(--radius3);
+    padding: 40px;
+    height: 400px;
+  }
+
+  .pricingContainer1 {
+    background: rgba(220, 20, 60, 0.2);
+  }
+  .pricingContainer2 {
+    background: rgba(0, 194, 194, 0.2);
+  }
+  .pricingContainer3 {
+    background: rgba(0, 0, 128, .2);
+  }
+  .pricingContainer4 {
+    background: rgb(0, 255, 0, .2);
+  }
+  
+  .pricingDetails {
+    /* Styles for the details div */
+  }
+  
+  .pricingButton {
+    padding: 12px;
+    background: none;
+    border: 2px solid var(--theme-blue);
+    color: var(--theme-blue);
+    font-size: 15px;
+    font-weight: 600;
+  }
+  
+  .pricingAmount {
+    /* Styles for the amount paragraph */
+  }
+  
+  .pricingSpan {
+    /* Styles for the span within the amount paragraph */
+  }
+  
+  .pricingText {
+    /* Styles for the "Per member, per year" paragraph */
+  }
+  
+  .featureList {
+    /* Styles for the feature list div */
+  }
+  
+  .featureItem {
+    /* Styles for each item within the feature list */
+  }
+  
+  .startButton {
+    /* Styles for the "Start for free" button */
+  }  
+
+  @media screen and (max-width: 970px) {
+    .pricingCarousel {
+      padding: 50px 20px;
+      width: 100%;
+      max-width: 1400px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content
+    }
+    
+    .pricingContainer {
+      border-radius: var(--radius3);
+      padding: 40px;
+      height: fit-content;
+      min-height: 350px;
+    } 
+  }

@@ -8,5 +8,8 @@ export default defineConfig({
   define: {
     // env variables from .env file
     "process.env.VITE_GOOGLE_CLIENT_ID": JSON.stringify(process.env.VITE_GOOGLE_CLIENT_ID)
-  }
+  },
+  css: {
+    modules: true,
+  },
 })
