@@ -20,7 +20,7 @@ const PricingCarousel = () => {
           </div>
         </div>
         <p>The Swift Plan ensures timely deliveries within a 20km to 80km radius, providing standard services with reliability and support.</p>
-        <button className={style.startButton}>Start for free</button>
+        <button className={style.startButton}>Book  Delivery</button>
       </div>
 
       <div className={[style["pricingContainer2"], style.pricingContainer].join(' ')}>
@@ -38,7 +38,7 @@ const PricingCarousel = () => {
           </div>
         </div>
         <p>Opt for the Efficient Plan for quicker shipping within an 80km to 140km distance, offering expedited services and priority support for enhanced efficiency.</p>
-        <button className={style.startButton}>Start for free</button>
+        <button className={style.startButton}>Book  Delivery</button>
       </div>
 
       <div className={[style["pricingContainer3"], style.pricingContainer].join(' ')}>
@@ -56,7 +56,7 @@ const PricingCarousel = () => {
           </div>
         </div>
         <p>Cover longer distances seamlessly with the Global Plan, featuring express deliveries, premium protection, and dedicated support for distances between 140km and 250km.</p>
-        <button className={style.startButton}>Start for free</button>
+        <button className={style.startButton}>Book  Delivery</button>
       </div>
 
       <div className={[style["pricingContainer4"], style.pricingContainer].join(' ')}>
@@ -74,7 +74,7 @@ const PricingCarousel = () => {
           </div>
         </div>
         <p>The Infinity Plan is designed for extensive distances, offering same-day delivery, premium handling, and VIP concierge service.</p>
-        <button className={style.startButton}>Start for free</button>
+        <button className={style.startButton}>Book  Delivery</button>
       </div>
 
     </section>
