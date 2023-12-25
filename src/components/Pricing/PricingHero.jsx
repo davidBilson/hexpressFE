@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import style from "./PricingHero.module.css"
 import { FaToggleOn, FaToggleOff } from "react-icons/fa";
+import useStore from '../../store/useStore';
 
 const PricingHero = () => {
 
-  const [switchUnit, setSwitchUnit] = useState(true)
+  const distanceUnit = useStore((initialState) => initialState.distanceUnit )
+  const setDistanceUnit = useStore((initialState) => initialState.setDistanceUnit)
 
   return (
     <section className={style["pricing-hero-container"]} >
@@ -14,9 +16,12 @@ const PricingHero = () => {
         <p>
           <span className={style["price"]}>Price</span>  
           &nbsp;/&nbsp;
-          <span className={style["unit"]}>{switchUnit ? "Mile" : "Kilometer"}</span></p>
-        <button className={style["pricing-unit-button"]} onClick={() => setSwitchUnit(!switchUnit)}>
-          {switchUnit ? <FaToggleOff size="25px" style={{color: "var(--darkcyan)"}} /> : <FaToggleOn size="25px" style={{color: "var(--darkcyan)"}} />}
+          <span className={style["unit"]}>{distanceUnit ? "Mile" : "Kilometer"}</span></p>
+        <button 
+          className={style["pricing-unit-button"]} 
+          onClick={() => setDistanceUnit()}
+        >
+          {distanceUnit ? <FaToggleOff size="25px" style={{color: "var(--darkcyan)"}} /> : <FaToggleOn size="25px" style={{color: "var(--darkcyan)"}} />}
         </button>
       </div>
     </section>

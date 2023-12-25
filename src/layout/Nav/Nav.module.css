@@ -55,6 +55,10 @@
 .navLoginBtn:hover {
     color: var(--white);
     background: var(--theme-blue);
+    scale: 0.99;
+}
+.navLoginBtn:active {
+    scale: 0.95;
 }
 .navIcon {
     font-size: 25px;

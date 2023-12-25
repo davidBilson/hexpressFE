@@ -1,7 +1,13 @@
 import React from 'react';
 import style from './PricingCarousel.module.css';
+import useStore from '../../store/useStore';
 
 const PricingCarousel = () => {
+
+  const distanceUnit = useStore((initialState) => initialState.distanceUnit )
+  
+
+
   return (
     <section className={style.pricingCarousel}>
 
