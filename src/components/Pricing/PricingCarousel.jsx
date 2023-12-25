@@ -5,8 +5,20 @@ import useStore from '../../store/useStore';
 const PricingCarousel = () => {
 
   const distanceUnit = useStore((initialState) => initialState.distanceUnit )
-  
 
+  const calculateRange = (start, end, unit) => {
+    const convertedStart = unit ? start * 0.6 + "mi" : start + "km";
+    const convertedEnd = unit ? end * 0.6 + "mi" : end === "beyond" ? end + "mi" : end + "km";
+    return `${convertedStart} - ${convertedEnd}`;
+  };
+  // RANGE 1 // 
+  const rangeA = calculateRange(20, 80, distanceUnit);
+  // RANGE 2 // 
+  const rangeB = calculateRange(80, 140, distanceUnit);
+  // RANGE 3 // 
+  const rangeC = calculateRange(140, 250, distanceUnit);
+  // RANGE 4 // 
+  const rangeD = calculateRange(250, "beyond", distanceUnit);
 
   return (
     <section className={style.pricingCarousel}>
@@ -19,7 +31,9 @@ const PricingCarousel = () => {
             <p className={style.pricingText}>Per member, per year</p>
           </div>
           <div className={style.featureList}>
-            <span className={style.featureItem}>20km - 80km</span>
+            <span className={style.featureItem}>
+            {rangeA}
+            </span>
             <span className={style.featureItem}>Standard Delivery</span>
             <span className={style.featureItem}>Package Tracking</span>
             <span className={style.featureItem}>Email Notifications</span>
@@ -37,7 +51,7 @@ const PricingCarousel = () => {
             <p className={style.pricingText}>Per member, per year</p>
           </div>
           <div className={style.featureList}>
-            <span className={style.featureItem}>80km - 140km</span>
+            <span className={style.featureItem}>{rangeB}</span>
             <span className={style.featureItem}>Real-time GPS Tracking</span>
             <span className={style.featureItem}>Signature Confirmation</span>
             <span className={style.featureItem}>Expedited Delivery</span>
@@ -55,7 +69,7 @@ const PricingCarousel = () => {
             <p className={style.pricingText}>Per member, per year</p>
           </div>
           <div className={style.featureList}>
-            <span className={style.featureItem}>140km - 250km</span>
+            <span className={style.featureItem}>{rangeC}</span>
             <span className={style.featureItem}>Premium Package Protection</span>
             <span className={style.featureItem}>Dedicated Account Manager</span>
             <span className={style.featureItem}>24/7 Priority Support</span>
@@ -73,7 +87,7 @@ const PricingCarousel = () => {
             <p className={style.pricingText}>Per member, per year</p>
           </div>
           <div className={style.featureList}>
-            <span className={style.featureItem}>250km and beyond</span>
+            <span className={style.featureItem}>{rangeD}</span>
             <span className={style.featureItem}>Same-day Delivery</span>
             <span className={style.featureItem}>White Glove Service</span>
             <span className={style.featureItem}>VIP Customer Concierge</span>
