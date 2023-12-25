@@ -14,7 +14,7 @@ const PricingHero = () => {
         <p>
           <span className={style["price"]}>Price</span>  
           &nbsp;/&nbsp;
-          <span className={style["unit"]}>{switchUnit ? "Miles" : "Kilometer"}</span></p>
+          <span className={style["unit"]}>{switchUnit ? "Mile" : "Kilometer"}</span></p>
         <button className={style["pricing-unit-button"]} onClick={() => setSwitchUnit(!switchUnit)}>
           {switchUnit ? <FaToggleOff size="25px" style={{color: "var(--darkcyan)"}} /> : <FaToggleOn size="25px" style={{color: "var(--darkcyan)"}} />}
         </button>

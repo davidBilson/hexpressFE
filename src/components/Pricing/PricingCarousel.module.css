@@ -1,4 +1,4 @@
-.pricingCarousel {
+  .pricingCarousel {
     padding: 50px 20px;
     width: 100%;
     max-width: 1400px;
@@ -9,13 +9,11 @@
     grid-column-gap: 30px;
     grid-row-gap: 30px;
   }
-  
   .pricingContainer {
     border-radius: var(--radius3);
     padding: 40px;
-    height: 400px;
+    height: 430px;
   }
-
   .pricingContainer1 {
     background: rgba(220, 20, 60, 0.2);
   }
@@ -28,11 +26,11 @@
   .pricingContainer4 {
     background: rgb(0, 255, 0, .2);
   }
-  
   .pricingDetails {
-    /* Styles for the details div */
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
   }
-  
   .pricingButton {
     padding: 12px;
     background: none;
@@ -41,36 +39,44 @@
     font-size: 15px;
     font-weight: 600;
   }
-  
   .pricingAmount {
-    /* Styles for the amount paragraph */
+    font-size: 100px;
+    color: var(--theme-blue);
+    font-weight: 600;
+    margin-top: 90px;
+    margin-bottom: 60px;
   }
-  
   .pricingSpan {
     /* Styles for the span within the amount paragraph */
   }
-  
   .pricingText {
-    /* Styles for the "Per member, per year" paragraph */
+    color: var(--theme-blue);
+    font-weight: 500;
+    font-size: 15px;
   }
-  
   .featureList {
-    /* Styles for the feature list div */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-right: 40px;
+    color: var(--theme-blue);
+    font-weight: 500;
   }
-  
-  .featureItem {
-    /* Styles for each item within the feature list */
+  .featureList > span:nth-child(1) {
+    font-weight: 700;
   }
-  
   .startButton {
-    /* Styles for the "Start for free" button */
-  }  
-
-  @media screen and (max-width: 970px) {
+    width: 100%;
+    margin-top: 30px;
+    padding: 15px;
+    border: none;
+    border-radius: var(--radius2);
+    background: var(--theme-blue);
+    color: white;
+    font-size: 16px;
+  }
+  @media screen and (max-width: 1370px) {
     .pricingCarousel {
-      padding: 50px 20px;
-      width: 100%;
-      max-width: 1400px;
       margin: auto;
       display: flex;
       flex-direction: column;
@@ -78,7 +84,6 @@
       justify-content: center;
       align-items: center;
     }
-    
     .pricingContainer {
       border-radius: var(--radius3);
       padding: 40px;
@@ -86,4 +91,20 @@
       height: fit-content;
       min-height: 350px;
     } 
+  }
+
+  @media screen and (max-width: 560px) {
+    .pricingContainer {
+      padding: 30px;
+    }
+    .featureList {
+      gap: 15px;
+      padding-right: 0px;
+      font-size: 13px;
+    }
+    .pricingAmount {
+      font-size: 70px;
+      margin-top: 60px;
+      margin-bottom: 60px;
+    }
   }
