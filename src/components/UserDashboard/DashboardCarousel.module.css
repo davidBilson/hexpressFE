@@ -58,7 +58,21 @@
     .carousel {
         width: 100%;
         max-width: 450px;
-        height: 170px;
-        padding: 35px;
+        height: 150px;
+        padding: 25px;
     }   
+    .carousel> p:nth-child(1) {
+        font-size: 18px;
+    }
+    .carousel1 > p:nth-child(1) {
+        display: flex;
+        justify-content: space-between;
+        font-size: 18px;
+    }
+    .carousel1 > p:nth-child(2) {
+        font-size: 40px;
+    }
+    .carousel > p {
+        font-size: 40px;
+    }
 }
