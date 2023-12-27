@@ -29,7 +29,10 @@ const DashboardHeader = () => {
 
   return (
     <section className={style.dashboardHeaderContainer}>
-        <p className={style.sideBarName}>Good {timeOfDay}, {userName.split(" ")[0]}!</p>
+        <div>
+          <h2>Good {timeOfDay}, {userName.split(" ")[0]}!</h2>
+          <p>Your current dashboard for today</p>
+        </div>
     </section>
   )
 }
