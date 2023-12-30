@@ -11,3 +11,8 @@
     color: var(--theme-blue);
     font-weight: 900;
 }
+@media screen and (max-width: 480px) {
+    .logo {
+        font-size: 30px;
+    }
+}

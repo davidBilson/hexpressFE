@@ -23,7 +23,6 @@
   --radius2: 10px;
   --radius3: 20px;
 }
-
 body {
   background: var(--white);
 }
