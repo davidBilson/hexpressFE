@@ -7,14 +7,10 @@ Hexpress Delivery is a robust web application developed using the MERN (MongoDB,
 ## Table of Contents
 
 - [Features](#features)
-- [Installation](#installation)
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
 - [Project Structure](#project-structure)
-- [User Authentication](#user-authentication)
-- [Data Fetching](#data-fetching)
 - [Responsive Design](#responsive-design)
-- [Animations with AOS](#animations-with-aos)
 - [Future Enhancements](#future-enhancements)
 
 ## Features
