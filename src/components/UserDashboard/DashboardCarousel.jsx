@@ -7,36 +7,6 @@ import { TbBrandCashapp } from "react-icons/tb";
 const DashboardCarousel = () => {
   return (
     <>
-      {/* <section className={style.carouselContainer}>
-        <div className={style.carousel}>
-          <p>
-            <span>Total Shipment</span>
-            <span><TbBrandCashapp size={"20px"} /></span>
-          </p>
-          <p>{"5"}</p>
-        </div>
-        <div className={style.carousel}>
-          <p>
-            <span>Total Amount Spent</span>
-            <span><TbBrandCashapp size={"20px"} /></span>
-          </p>
-          <p>{"$" + "429.00"}</p>
-        </div>
-        <div className={style.carousel}>
-          <p>
-            <span>Road Freight</span>
-            <span><TbBrandCashapp size={"20px"} /></span>
-          </p>
-          <p>{"4"}</p>
-        </div>
-        <div className={style.carousel}>
-          <p>
-            <span>Air Freight</span>
-            <span><TbBrandCashapp size={"20px"} /></span>
-          </p>
-          <p>{"1"}</p>
-        </div>
-      </section> */}
       <section className={style.carouselContainer}>
       <Swiper
       style={{width: "100%"}}
