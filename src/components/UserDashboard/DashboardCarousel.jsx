@@ -3,6 +3,7 @@ import style from './DashboardCarousel.module.css'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { TbBrandCashapp } from "react-icons/tb";
+import { FaRoad, FaShippingFast, FaPlane } from "react-icons/fa";
 
 const DashboardCarousel = () => {
   return (
@@ -41,7 +42,7 @@ const DashboardCarousel = () => {
           <div className={`${style.carousel} ${style.carousel1}`}>
             <p>
               <span>Total Shipment</span>
-              <span><TbBrandCashapp size={"20px"} /></span>
+              <span><FaShippingFast size={"20px"} /></span>
             </p>
             <p>{"5"}</p>
           </div>
@@ -59,7 +60,7 @@ const DashboardCarousel = () => {
           <div className={`${style.carousel} ${style.carousel3}`}>
             <p>
               <span>Road Freight</span>
-              <span><TbBrandCashapp size={"20px"} /></span>
+              <span><FaRoad size={"20px"} /></span>
             </p>
             <p>{"4"}</p>
           </div>
@@ -68,7 +69,7 @@ const DashboardCarousel = () => {
           <div className={`${style.carousel} ${style.carousel4}`}>
             <p>
               <span>Air Freight</span>
-              <span><TbBrandCashapp size={"20px"} /></span>
+              <span><FaPlane size={"20px"} /></span>
             </p>
             <p>{"1"}</p>
           </div>
