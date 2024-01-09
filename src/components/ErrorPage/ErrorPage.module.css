@@ -1,0 +1,73 @@
+.errorPage {
+    padding: 200px 20px 100px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    min-height: 90vh;
+}
+.errorHeading {
+    font-size: 25px;
+    font-weight: 400;
+    color: grey;
+}
+.errorCode {
+    font-size: 150px;
+    font-weight: 800;
+    color: var(--darkcyan);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.errorMessage {
+    font-size: 15px;
+    color: var(--night);
+}
+.buttonsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.homeButton {
+    padding: 12px;
+    border: none;
+    border-radius: var(--radius1);
+    background: var(--theme-blue);
+    cursor: pointer;
+    color: var(--ghostwhite);
+    transition: .2s ease-in-out;
+    font-size: 15px;
+}
+.homeButton:hover {
+    scale: .97;
+}
+.signInButton {
+    padding: 12px;
+    border: none;
+    border-radius: var(--radius1);
+    background: var(--theme-blue);
+    cursor: pointer;
+    color: var(--ghostwhite);
+    font-size: 15px;
+}
+.signInButton:hover {
+    scale: .97;
+}
+
+@media screen and (max-width: 600px) {
+    .errorHeading {
+        font-size: 20px;
+        font-weight: 400;
+        color: grey;
+    }
+    .errorCode {
+        font-size: 100px;
+        font-weight: 800;
+        color: var(--darkcyan);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

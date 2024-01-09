@@ -6,9 +6,9 @@
   --night: #374151;
   --ghostwhite: whitesmoke;
   --theme-blue: rgb(0, 18, 117);
-  --light-theme-blue: rgba(0, 18, 117, 0.1);
-  --darkcyan: rgb(0, 194, 194);
-  --lightcyan: rgba(0, 194, 194, 0.1);
+  --light-theme-blue: #0012751a;
+  --darkcyan: rgb(0, 190, 190);
+  --lightcyan: #00c2c21a;
   --lightred: rgba(219, 20, 60, 0.1);
 
   --max-width: 1470px;

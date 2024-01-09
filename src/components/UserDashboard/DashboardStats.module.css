@@ -1,5 +1,56 @@
 /* Dashboard Stats */
+.dashboard-stat-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 0px 20px;
+}
 
 /* Dashboard Stat Detail */
+.DashboardStatDetail {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 750px;
+    min-height: 375px;
+    border-radius: var(--radius3);
+    background: var(--theme-blue);
+    padding: 20px;
+}
+.DashboardStatDetail-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.DashboardStatDetail-top > h3 {
+    font-size: 20px;
+    color: var(--ghostwhite);
+}
+.DashboardStatDetail-top > button {
+    outline: none;
+    border: none;
+    padding: none;
+    background: none;
+    cursor: pointer;
+    color: var(--ghostwhite);
+    transition: .2s ease-in-out;
+}
+.DashboardStatDetail-top > button:hover {
+    border-bottom: 1px solid var(--ghostwhite);
+}
 
+.DashboardStatDetail-table-header {
+    padding: 15px;
+    background: var(--darkcyan);
+    color: var(--ghostwhite);
+    border-radius: var(--radius2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
 /* Dashboard Stat Geo */

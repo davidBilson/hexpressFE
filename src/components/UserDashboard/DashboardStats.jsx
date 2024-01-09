@@ -5,7 +5,7 @@ import DashboardStatGeo from './DashboardStatGeo'
 
 const DashboardStats = () => {
   return (
-    <section>
+    <section className={style["dashboard-stat-container"]}>
         <DashboardStatDetail />
         <DashboardStatGeo />
     </section>

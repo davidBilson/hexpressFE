@@ -10,6 +10,7 @@ import ForgotPassword from './pages/ForgotPassword';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import About from './pages/About';
+import PageNotFound from './pages/PageNotFound';
 import axios from 'axios';
 import useStore from './store/useStore';
 import { Tooltip } from 'react-tooltip'
@@ -44,9 +45,7 @@ const App = () => {
   const userLoggedIn = useStore((initialState) => initialState.setUser);
 
   useEffect(() => {
-
     const userId = window.localStorage.getItem('userId');
-
     if (userId) {
       const  fetchUserData = async (req, res) => {
         try {
@@ -65,7 +64,6 @@ const App = () => {
           console.log(error);
         }
       }
-
       fetchUserData();
     }
   }, []);
@@ -97,6 +95,7 @@ const App = () => {
           element={user ? <Dashboard /> : <Navigate to={'/sign-in'} />}
         />
         <Route path='/terms-of-service' element={<TermsOfService />} />
+        <Route path='*' element={<PageNotFound />} />
       </Routes>
       <Footer />
     </>
