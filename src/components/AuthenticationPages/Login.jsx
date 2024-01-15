@@ -17,13 +17,6 @@ const Login = () => {
   const userId = useStore((initialState) => initialState.userId);
   const user = useStore((initialState) => initialState.user)
 
-  // console.log(
-  //   "UserName:", userName,
-  //   "\nUserEmail:", userEmail,
-  //   "\nUserId:", userId,
-  //   "\nUser:", user
-  // );
-  
   // access actions from store
   const setUserName = useStore((initialState) => initialState.setUserName);
   const setUserEmail = useStore((initialState) => initialState.setUserEmail);

@@ -1,5 +1,8 @@
 import React, { useEffect } from 'react';
 import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
+// zustand store
+import useStore from './store/useStore';
+// UI components//
 import Navbar from './layout/Nav/Nav';
 import Home from './pages/home';
 import Footer from './layout/Footer/Footer';
@@ -11,14 +14,15 @@ import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import About from './pages/About';
 import PageNotFound from './pages/PageNotFound';
+import Pricing from './pages/Pricing';
+// Libraries
 import axios from 'axios';
-import useStore from './store/useStore';
 import { Tooltip } from 'react-tooltip'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Pricing from './pages/Pricing';
+import { PuffLoader } from 'react-spinners'
 
 const ScrollToTop = () => {
   const location = useLocation();
@@ -68,8 +72,18 @@ const App = () => {
     }
   }, []);
 
+  // Zustand store to access loadAnimation states and actions
+  const { loadAnimation } = useStore();
+
   return (
     <>
+    {
+      loadAnimation 
+      &&
+      <div className={"loadingAnimation"} >
+        <PuffLoader color="white" loading={true} size={100} />
+      </div>
+    }
       <Tooltip id="my-tooltip" style={{
           zIndex: "500", 
           background: "darkslategrey", 

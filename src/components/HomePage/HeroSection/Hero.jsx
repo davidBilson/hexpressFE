@@ -1,9 +1,34 @@
 import React from 'react';
 import style from './Hero.module.css';
-import heroImage from '../../../assets/heroImage.jpg'
+import { toast   } from 'react-toastify';
+
 
 const Hero = () => {
+  const toastErrorProperties = {
+    position: "top-center",
+    autoClose: 1000,
+    hideProgressBar: true,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+    style: {
+      width: '250px',
+      fontSize: '14px',
+      margin: "auto",
+      borderRadius: "6px",
+    }
+  }
+  const trackParcel = async (e) => {
+    e.preventDefault();
+    toast.error("Invalid waybill number!", toastErrorProperties );
+  }
+
+  
   return (
+    <>
+
     <section className={style.heroSection}>
       <div className={style.heroSectionImageContainer}>
       </div>
@@ -12,7 +37,7 @@ const Hero = () => {
         <p className={style.heroText}>
           Easy, fast, from point A to point B, seamlessly, within 24 hours.
         </p>
-        <form className={style.heroForm}>
+        <form className={style.heroForm} autoComplete="off" onSubmit={trackParcel}>
           <input
             type="text"
             className={style.heroInput}
@@ -22,6 +47,8 @@ const Hero = () => {
         </form>
       </article>
     </section>
+    
+    </>
   );
 };
 
