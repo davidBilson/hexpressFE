@@ -58,21 +58,24 @@
 
 .DashboardStatDetail-table-header > div {
     width: 20%;
-    background: red;
+    /* background: red; */
 }
 
 .DashboardStatDetail-table-data {
     padding: 15px;
     background: transparent;
     color: var(--night);
-    font-weight: 300;
-    font-size: 14px;
-    border-radius: 10px 10px 0 0;
+    /* font-weight: 300; */
+    /* font-size: 14px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
     border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.DashboardStatDetail-table-data > div {
+    width: 20%;
+    /* background: red; */
 }
 
 .DashboardStatDetail-table {

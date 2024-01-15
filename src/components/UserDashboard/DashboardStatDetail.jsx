@@ -17,11 +17,102 @@ const DashboardStatDetail = () => {
               <div>Status</div>
           </div>
           <div className={style["DashboardStatDetail-table-data"]}>
-              <div>Order ID</div>
-              <div>Services</div>
-              <div>Category</div>
-              <div>Date of Discharge</div>
-              <div>Status</div>
+              <div>ID010203</div>
+              <div>Delivery</div>
+              <div>Swift</div>
+              <div>01/01/2024</div>
+              <div>In transit</div>
+          </div>
+          <div className={style["DashboardStatDetail-table-data"]}>
+              <div>ID010203</div>
+              <div>Delivery</div>
+              <div>Swift</div>
+              <div>01/01/2024</div>
+              <div>In transit</div>
+          </div>
+          <div className={style["DashboardStatDetail-table-data"]}>
+              <div>ID010203</div>
+              <div>Delivery</div>
+              <div>Swift</div>
+              <div>01/01/2024</div>
+              <div>In transit</div>
+          </div>
+          <div className={style["DashboardStatDetail-table-data"]}>
+              <div>ID010203</div>
+              <div>Delivery</div>
+              <div>Swift</div>
+              <div>01/01/2024</div>
+              <div>In transit</div>
+          </div>
+          <div className={style["DashboardStatDetail-table-data"]}>
+              <div>ID010203</div>
+              <div>Delivery</div>
+              <div>Swift</div>
+              <div>01/01/2024</div>
+              <div>In transit</div>
+          </div>
+          <div className={style["DashboardStatDetail-table-data"]}>
+              <div>ID010203</div>
+              <div>Delivery</div>
+              <div>Swift</div>
+              <div>01/01/2024</div>
+              <div>In transit</div>
+          </div>
+          <div className={style["DashboardStatDetail-table-data"]}>
+              <div>ID010203</div>
+              <div>Delivery</div>
+              <div>Swift</div>
+              <div>01/01/2024</div>
+              <div>In transit</div>
+          </div>
+          <div className={style["DashboardStatDetail-table-data"]}>
+              <div>ID010203</div>
+              <div>Delivery</div>
+              <div>Swift</div>
+              <div>01/01/2024</div>
+              <div>In transit</div>
+          </div>
+          <div className={style["DashboardStatDetail-table-data"]}>
+              <div>ID010203</div>
+              <div>Delivery</div>
+              <div>Swift</div>
+              <div>01/01/2024</div>
+              <div>In transit</div>
+          </div>
+          <div className={style["DashboardStatDetail-table-data"]}>
+              <div>ID010203</div>
+              <div>Delivery</div>
+              <div>Swift</div>
+              <div>01/01/2024</div>
+              <div>In transit</div>
+          </div>
+          <div className={style["DashboardStatDetail-table-data"]}>
+              <div>ID010203</div>
+              <div>Delivery</div>
+              <div>Swift</div>
+              <div>01/01/2024</div>
+              <div>In transit</div>
+          </div>
+          <div className={style["DashboardStatDetail-table-data"]}>
+              <div>ID010203</div>
+              <div>Delivery</div>
+              <div>Swift</div>
+              <div>01/01/2024</div>
+              <div>In transit</div>
+          </div>
+          <div className={style["DashboardStatDetail-table-data"]}>
+              <div>ID010203</div>
+              <div>Delivery</div>
+              <div>Swift</div>
+              <div>01/01/2024</div>
+              <div>In transit</div>
+          </div>
+          <div className={style["DashboardStatDetail-table-data"]}>
+              <div>ID010203</div>
+              <div>Delivery</div>
+              <div>Swift</div>
+              <div>01/01/2024</div>
+              <div>In transit</div>
           </div>
         </div>
     </div>
