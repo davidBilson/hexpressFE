@@ -18,5 +18,4 @@ const DashboardStatGeo = () => {
     </section>
   )
 }
-
 export default DashboardStatGeo
