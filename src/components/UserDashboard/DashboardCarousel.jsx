@@ -35,8 +35,6 @@ const DashboardCarousel = () => {
             spaceBetween: 10,
           },
         }}
-        onSlideChange={() => console.log('slide change')}
-        onSwiper={(swiper) => console.log(swiper)}
       >
         <SwiperSlide>
           <div className={`${style.carousel} ${style.carousel1}`}>

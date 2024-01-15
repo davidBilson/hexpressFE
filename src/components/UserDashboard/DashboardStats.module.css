@@ -2,13 +2,12 @@
 .dashboard-stat-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
     max-width: var(--max-width);
     margin: auto;
     padding: 0px 20px;
 }
-
 /* Dashboard Stat Detail */
 .DashboardStatDetail {
     display: flex;
@@ -65,8 +64,6 @@
     padding: 15px;
     background: transparent;
     color: var(--night);
-    /* font-weight: 300; */
-    /* font-size: 14px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -86,4 +83,38 @@
     overflow: hidden;
     min-height: 350px;
 }
-/* Dashboard Stat Geo */
+
+@media screen and (max-width: 1200px) {
+    .dashboard-stat-container {
+        flex-direction: column;
+    }   
+    .DashboardStatDetail {
+        flex-direction: column;
+        max-width: 100%;
+        padding: 0px;
+        margin-bottom: 70px;
+    }
+    .DashboardStatDetail-table {
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 540px) {
+    .DashboardStatDetail-table {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .DashboardStatDetail-table {
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 444px) {
+    .DashboardStatDetail-table {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 417px) {
+    .DashboardStatDetail-table {
+        font-size: 11px;
+    }
+}

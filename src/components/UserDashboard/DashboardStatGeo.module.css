@@ -1,0 +1,52 @@
+.dashboardStatGeo {
+    margin-top: 50px;
+    border-radius: var(--radius2);
+    position: relative;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+}
+.mapContainer {
+    background-color: white;
+    padding: 20px;
+}
+.mapImageBg {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.mapImage {
+    height: 200px;
+}
+.locationInfo {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background: ghostwhite;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 10px 10px 0px 0px;
+    overflow: hidden;
+}
+.locationTitle {
+    padding: 0px 20px;
+    padding-top: 10px;
+    font-size: 20px;
+    color: var(--night);
+}
+.locationAddress {
+    padding: 0px 20px;
+    padding-bottom: 10px;
+    font-size: 12px;
+    font-weight: 300;
+    color: grey;
+    margin-top: 5px;
+}
+.distanceInfo {
+    background: rgba(0, 0, 0, 0.05);
+    color: var(--night);
+    color: rgb(0, 167, 0);
+    padding: 10px 20px;
+    font-size: 13px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
