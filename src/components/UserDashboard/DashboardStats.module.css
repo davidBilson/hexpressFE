@@ -17,7 +17,6 @@
     max-width: 750px;
     min-height: 375px;
     border-radius: var(--radius3);
-    background: var(--theme-blue);
     padding: 20px;
 }
 .DashboardStatDetail-top {
@@ -28,7 +27,8 @@
 }
 .DashboardStatDetail-top > h3 {
     font-size: 20px;
-    color: var(--ghostwhite);
+    font-weight: 500;
+    color: var(--theme-blue);
 }
 .DashboardStatDetail-top > button {
     outline: none;
@@ -36,7 +36,7 @@
     padding: none;
     background: none;
     cursor: pointer;
-    color: var(--ghostwhite);
+    color: var(--night);
     transition: .2s ease-in-out;
 }
 .DashboardStatDetail-top > button:hover {
@@ -45,12 +45,42 @@
 
 .DashboardStatDetail-table-header {
     padding: 15px;
-    background: var(--darkcyan);
-    color: var(--ghostwhite);
-    border-radius: var(--radius2);
+    background: var(--lightcyan);
+    color: var(--night);
+    font-weight: 500;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 10px; */
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.DashboardStatDetail-table-header > div {
+    width: 20%;
+    background: red;
+}
+
+.DashboardStatDetail-table-data {
+    padding: 15px;
+    background: transparent;
+    color: var(--night);
+    font-weight: 300;
+    font-size: 14px;
+    border-radius: 10px 10px 0 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.DashboardStatDetail-table {
+    background: var(--ghostwhite);
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.05);
+    padding-bottom: 50px;
+    border-radius: var(--radius2);
+    overflow: hidden;
+    min-height: 350px;
 }
 /* Dashboard Stat Geo */
