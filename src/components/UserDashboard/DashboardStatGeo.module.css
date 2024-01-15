@@ -50,3 +50,23 @@
     font-size: 13px;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
+
+@media screen and (max-width: 1200px) {
+    .dashboardStatGeo {
+        margin-top: 150px;
+    }
+    .locationInfo {
+        position: absolute;
+        top: 10%;
+    }
+}
+
+@media screen and (max-width: 525px) {
+    .locationInfo {
+        position: absolute;
+        top: 10%;
+    }
+    .mapContainer {
+        margin-top: 200px;
+    }
+}

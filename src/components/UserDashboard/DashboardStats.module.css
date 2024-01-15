@@ -14,7 +14,7 @@
     flex-direction: column;
     width: 100%;
     max-width: 750px;
-    min-height: 375px;
+    min-height: fit-content;
     border-radius: var(--radius3);
     padding: 20px;
 }
@@ -87,15 +87,20 @@
 @media screen and (max-width: 1200px) {
     .dashboard-stat-container {
         flex-direction: column;
+        justify-content: none;
+        align-items: center;
     }   
     .DashboardStatDetail {
         flex-direction: column;
         max-width: 100%;
         padding: 0px;
-        margin-bottom: 70px;
+        margin-bottom: 0px;
     }
     .DashboardStatDetail-table {
         font-size: 15px;
+    }
+    .DashboardStatDetail-table {
+        min-height: fit-content;
     }
 }
 @media screen and (max-width: 540px) {
