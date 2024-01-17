@@ -91,6 +91,7 @@ const Login = () => {
 
     // attempt to authenticate users by sending login credentials to server
     try {
+      
       const response = await axios.post("http://localhost:5000/user/signin", {email, password});
 
       if (response.data.success === true) {

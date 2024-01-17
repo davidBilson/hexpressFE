@@ -22,7 +22,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { PuffLoader } from 'react-spinners'
+import { CircleLoader  } from 'react-spinners'
 
 const ScrollToTop = () => {
   const location = useLocation();
@@ -81,10 +81,11 @@ const App = () => {
       loadAnimation 
       &&
       <div className={"loadingAnimation"} >
-        <PuffLoader color="white" loading={true} size={100} />
+        <CircleLoader  color="white" loading={true} size={100} />
       </div>
     }
-      <Tooltip id="my-tooltip" style={{
+      <Tooltip id="my-tooltip" 
+        style={{
           zIndex: "500", 
           background: "darkslategrey", 
           padding: "4px", 
