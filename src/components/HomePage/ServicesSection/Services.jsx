@@ -4,8 +4,12 @@ import servicesImage from '../../../assets/heroImage.jpg'
 import servicesImage1 from '../../../assets/deliver1.jpg'
 import servicesImage2 from '../../../assets/supportteam.jpg'
 import personalShopper from '../../../assets/personalShopper.jpg'
+import { useNavigate } from 'react-router-dom'
 
 const Services = () => {
+
+  const navigate = useNavigate()
+
   return (
     <section className={style.servicesSection}>
 
@@ -21,6 +25,7 @@ const Services = () => {
 
       <section className={style.service}>
         <div  
+          onClick={() => navigate('/sign-in')}
           data-aos="zoom-in"
           data-aos-easing="linear"
           data-aos-duration="1000"

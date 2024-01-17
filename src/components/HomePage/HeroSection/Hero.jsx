@@ -43,8 +43,6 @@ const Hero = () => {
       console.log(error.message)
       toast.error("Couldn't fetch waybill number!", toastErrorProperties);
     }
-    // toast.error("Invalid way bill number!", toastErrorProperties );
-    // setUnLoadAnimation();
   };
 
   return (
