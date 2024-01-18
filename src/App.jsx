@@ -23,6 +23,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { CircleLoader  } from 'react-spinners'
+import History from './components/UserDashboard/History';
 
 const ScrollToTop = () => {
   const location = useLocation();
@@ -71,15 +72,12 @@ const App = () => {
       fetchUserData();
     }
   }, []);
-
   // Zustand store to access loadAnimation states and actions
   const { loadAnimation } = useStore();
 
   return (
     <>
-    {
-      loadAnimation 
-      &&
+    { loadAnimation &&
       <div className={"loadingAnimation"} >
         <CircleLoader  color="white" loading={true} size={100} />
       </div>
@@ -105,10 +103,9 @@ const App = () => {
         <Route path='/sign-up' element={<SignUp />} />
         <Route path='/reset-password' element={<ForgotPassword />} />
         <Route path='/privacy-policy' element={<PrivacyPolicy />} />
-        <Route
-          path='/dashboard'
-          element={user ? <Dashboard /> : <Navigate to={'/sign-in'} />}
-        />
+        <Route path='dashboard' element={user ? <Dashboard /> : <Navigate to={'/sign-in'} />} >
+          <Route path='history' element={<History />} ></Route>
+        </Route>
         <Route path='/terms-of-service' element={<TermsOfService />} />
         <Route path='*' element={<PageNotFound />} />
       </Routes>
@@ -116,5 +113,4 @@ const App = () => {
     </>
   );
 };
-
 export default App;

@@ -2,7 +2,8 @@ import { create } from 'zustand'
 
 const useStore = create((set) => ({
   // initial states
-  user: null,
+  // user: null,
+  user: true,
   userName: "",
   userEmail: "",
   userId: "",
