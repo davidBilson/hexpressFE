@@ -1,9 +1,10 @@
 import React from 'react';
 import { MdOutlineReportGmailerrorred } from 'react-icons/md';
 import style from './ErrorPage.module.css';
+import { useNavigate } from 'react-router-dom';
 
 const ErrorPage = () => {
-
+  const navigate = useNavigate();
   return (
     <section className={style.errorPage}>
       <h1 className={style.errorHeading}>Error: 404 Page Not Found</h1>
@@ -19,7 +20,7 @@ const ErrorPage = () => {
       </p>
       <div className={style.buttonsContainer}>
         <button className={style.homeButton}>Home Page</button>
-        <button className={style.signInButton}>Sign In</button>
+        <button className={style.signInButton} onClick={(() => navigate(-1))}>Previous Page</button>
       </div>
     </section>
   );

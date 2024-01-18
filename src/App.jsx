@@ -24,6 +24,11 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { CircleLoader  } from 'react-spinners'
 import History from './components/UserDashboard/History';
+import Transactions from './components/UserDashboard/Transactions';
+import ShipNow from './components/UserDashboard/ShipNow';
+import HexpressDelivery from './components/UserDashboard/HexpressDelivery';
+import OverseasShipping from './components/UserDashboard/OverseasShipping';
+import PersonalShopper from './components/UserDashboard/PersonalShopper';
 
 const ScrollToTop = () => {
   const location = useLocation();
@@ -104,7 +109,13 @@ const App = () => {
         <Route path='/reset-password' element={<ForgotPassword />} />
         <Route path='/privacy-policy' element={<PrivacyPolicy />} />
         <Route path='dashboard' element={user ? <Dashboard /> : <Navigate to={'/sign-in'} />} >
+          <Route index element={<History />} ></Route>
           <Route path='history' element={<History />} ></Route>
+          <Route path='ship-now' element={<ShipNow />} ></Route>
+          <Route path='hexpress-delivery' element={<HexpressDelivery />} ></Route>
+          <Route path='overseas-shipping' element={<OverseasShipping />} ></Route>
+          <Route path='transactions' element={<Transactions />} ></Route>
+          <Route path='personal-shopper' element={<PersonalShopper />} ></Route>
         </Route>
         <Route path='/terms-of-service' element={<TermsOfService />} />
         <Route path='*' element={<PageNotFound />} />

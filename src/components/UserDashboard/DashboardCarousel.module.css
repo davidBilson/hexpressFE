@@ -20,7 +20,7 @@
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
 }
 .carousel1 {
-    background: var(--theme-blue);
+    background: var(--night);
 }
 .carousel2 {
     background: var(--light-theme-blue);
