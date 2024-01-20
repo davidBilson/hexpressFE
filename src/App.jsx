@@ -109,7 +109,6 @@ const App = () => {
         <Route path='/reset-password' element={<ForgotPassword />} />
         <Route path='/privacy-policy' element={<PrivacyPolicy />} />
         <Route path='dashboard' element={user ? <Dashboard /> : <Navigate to={'/sign-in'} />} >
-          <Route index element={<History />} ></Route>
           <Route path='history' element={<History />} ></Route>
           <Route path='ship-now' element={<ShipNow />} ></Route>
           <Route path='hexpress-delivery' element={<HexpressDelivery />} ></Route>

@@ -1,14 +1,22 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { NavLink, useNavigate } from 'react-router-dom'
 import style from './DashboardNavigation.module.css'
 
 const DashboardNavigation = () => {
+    
     const styleActiveNav = ({ isActive}) => {
         return {
             backgroundColor: isActive ? 'rgb(0, 18, 117)' : 'inherit',
             color: isActive ? 'rgb(255, 255, 255)' : 'inherit',
         }
     }
+
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        navigate('/dashboard/history')
+    }, [])
+
   return (
     <div className={style.navigation}>
         <nav className={style.dashboardNavigation}>
@@ -23,4 +31,4 @@ const DashboardNavigation = () => {
   )
 }
 
-export default DashboardNavigation
+export default DashboardNavigation;
