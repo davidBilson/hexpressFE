@@ -12,12 +12,12 @@ const DashboardNavigation = () => {
   return (
     <div className={style.navigation}>
         <nav className={style.dashboardNavigation}>
-            <NavLink style={styleActiveNav} to='history'>History</NavLink>
-            <NavLink style={styleActiveNav} to='ship-now'>Ship Now</NavLink>
-            <NavLink style={styleActiveNav} to='hexpress-delivery'>Hexpress Delivery</NavLink>
-            <NavLink style={styleActiveNav} to='overseas-shipping'>Overseas Shipping</NavLink>
-            <NavLink style={styleActiveNav} to='transactions'>Transactions</NavLink>
-            <NavLink style={styleActiveNav} to='personal-shopper'>Personal Shopper</NavLink>
+            <NavLink style={styleActiveNav} to='/dashboard/history'>History</NavLink>
+            <NavLink style={styleActiveNav} to='/dashboard/ship-now'>Ship Now</NavLink>
+            <NavLink style={styleActiveNav} to='/dashboard/hexpress-delivery'>Hexpress Delivery</NavLink>
+            <NavLink style={styleActiveNav} to='/dashboard/overseas-shipping'>Overseas Shipping</NavLink>
+            <NavLink style={styleActiveNav} to='/dashboard/transactions'>Transactions</NavLink>
+            <NavLink style={styleActiveNav} to='/dashboard/personal-shopper'>Personal Shopper</NavLink>
         </nav>
     </div>
   )

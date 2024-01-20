@@ -47,6 +47,7 @@ const Nav = () => {
             (<Link to={'/sign-in'} onClick={closeNavigationBar} className={style.navLoginBtn}>Login / Sign Up</Link>)
           }
         </div>
+        {/* Put a profile dropdown here if user is logged in and it should be on mobile only */}
         <div className={style.loginLink}>
           <div 
             onClick={() => setShowNav(!showNav)}
