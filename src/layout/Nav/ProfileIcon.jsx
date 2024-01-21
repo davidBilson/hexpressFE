@@ -8,10 +8,12 @@ import { TbSettings } from "react-icons/tb";
 import { GrShop, GrTransaction } from "react-icons/gr";
 import { LiaShippingFastSolid } from "react-icons/lia";
 import { useNavigate } from 'react-router-dom';
+import useStore from '../../store/useStore'
 
 const ProfileIcon = () => {
 
     const navigate = useNavigate()
+    const { user } = useStore()
     const [showDropdown, setShowDropdown] = useState(false);
     const dropdownRef = useRef(null);
 
@@ -32,7 +34,7 @@ const ProfileIcon = () => {
             window.onclick = null;
         };
     }, []);
-
+    
   return (
         <>
             <div className={style.profileIcon} ref={dropdownRef}>
@@ -43,30 +45,53 @@ const ProfileIcon = () => {
                 {
                     showDropdown &&
                     <div className={style.profileIconDropdown} >
-                        <span onClick={() => {navigate('/dashboard'), setShowDropdown(false)}}>
-                            <MdOutlineDashboard size={15} />
-                            My Dashboard
-                        </span>
-                        <span onClick={() => {navigate('/dashboard/ship-now'), setShowDropdown(false)}}>
-                            <LiaShippingFastSolid size={15} />
-                            Ship Now
-                        </span>
-                        <span onClick={() => {navigate('/dashboard/transactions'), setShowDropdown(false)}}>
-                            <GrTransaction />
-                            Transactions
-                        </span>
-                        <span onClick={() => {navigate('/dashboard/personal-shopper'), setShowDropdown(false)}}>
-                            <GrShop size={15} />
-                            Personal Shopper
-                        </span>
-                        <span >
-                            <TbSettings size={15} />
-                            Settings
-                        </span>
-                        <span>
-                            <MdLogout size={15} />
-                            Logout
-                        </span>
+                        {
+                            user &&
+                            <span onClick={() => {navigate('/dashboard'), setShowDropdown(false)}}>
+                                <MdOutlineDashboard size={15} />
+                                My Dashboard
+                            </span>
+                        }
+                        {
+                            user &&
+                            <span onClick={() => {navigate('/dashboard/ship-now'), setShowDropdown(false)}}>
+                                <LiaShippingFastSolid size={15} />
+                                Ship Now
+                            </span>
+                        }
+                        {
+                            user &&
+                            <span onClick={() => {navigate('/dashboard/transactions'), setShowDropdown(false)}}>
+                                <GrTransaction size={15} />
+                                Transactions
+                            </span>
+                        }
+                        {
+                            user &&
+                            <span onClick={() => {navigate('/dashboard/personal-shopper'), setShowDropdown(false)}}>
+                                <GrShop size={15} />
+                                Personal Shopper
+                            </span>
+                        }
+                        {
+                            user &&
+                            <span >
+                                <TbSettings size={15} />
+                                Profile Settings
+                            </span>
+                        }
+                        {
+                            user ?
+                            <span onClick={() => {navigate('/'), setShowDropdown(false)}}>
+                                <MdLogout size={15} />
+                                Logout
+                            </span>
+                            :
+                            <span onClick={() => {navigate('/sign-in'), setShowDropdown(false)}}>
+                                <MdLogout size={15} />
+                                Login
+                            </span>
+                        }
                     </div>
                 }
             </div>

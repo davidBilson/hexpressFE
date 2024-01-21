@@ -2,8 +2,7 @@ import { create } from 'zustand'
 
 const useStore = create((set) => ({
   // initial states
-  // user: null,
-  user: true,
+  user: null,
   userName: "",
   userEmail: "",
   userId: "",
@@ -14,10 +13,10 @@ const useStore = create((set) => ({
   setLoadAnimation: () => set(() => ({ loadAnimation: true })),
   setUnLoadAnimation: () => set(() => ({ loadAnimation: false })),
   setDistanceUnit: () => set((initialState) => ({ distanceUnit: !initialState.distanceUnit})),
-  setUser: (loggedIn) => set((initialState) => ({ user: loggedIn})),
-  setUserName: (newUserName) => set((initialState) => ({ userName: newUserName })),
-  setUserEmail: (newUserEmail) => set((initialState) => ({ userEmail: newUserEmail })),
-  setUserId: (newUserId) => set((initialState) => ({ userId: newUserId })),
+  setUser: (loggedIn) => set(() => ({ user: loggedIn})),
+  setUserName: (newUserName) => set(() => ({ userName: newUserName })),
+  setUserEmail: (newUserEmail) => set(() => ({ userEmail: newUserEmail })),
+  setUserId: (newUserId) => set(() => ({ userId: newUserId })),
   setShowNavigationBar: () => set((initialState) => ({ showNavigationBar: !initialState.showNavigationBar })),
   // other functions
   closeNavigationBar: () => set(() => ({ showNavigationBar: false}))
