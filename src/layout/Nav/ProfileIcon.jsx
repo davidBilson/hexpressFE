@@ -7,8 +7,11 @@ import { MdLogout, MdOutlineDashboard } from "react-icons/md";
 import { TbSettings } from "react-icons/tb";
 import { GrShop, GrTransaction } from "react-icons/gr";
 import { LiaShippingFastSolid } from "react-icons/lia";
+import { useNavigate } from 'react-router-dom';
 
 const ProfileIcon = () => {
+
+    const navigate = useNavigate()
     const [showDropdown, setShowDropdown] = useState(false);
     const dropdownRef = useRef(null);
 
@@ -40,23 +43,23 @@ const ProfileIcon = () => {
                 {
                     showDropdown &&
                     <div className={style.profileIconDropdown} >
-                        <span>
+                        <span onClick={() => {navigate('/dashboard'), setShowDropdown(false)}}>
                             <MdOutlineDashboard size={15} />
                             My Dashboard
                         </span>
-                        <span>
+                        <span onClick={() => {navigate('/dashboard/ship-now'), setShowDropdown(false)}}>
                             <LiaShippingFastSolid size={15} />
                             Ship Now
                         </span>
-                        <span>
+                        <span onClick={() => {navigate('/dashboard/transactions'), setShowDropdown(false)}}>
                             <GrTransaction />
                             Transactions
                         </span>
-                        <span>
+                        <span onClick={() => {navigate('/dashboard/personal-shopper'), setShowDropdown(false)}}>
                             <GrShop size={15} />
                             Personal Shopper
                         </span>
-                        <span>
+                        <span >
                             <TbSettings size={15} />
                             Settings
                         </span>
