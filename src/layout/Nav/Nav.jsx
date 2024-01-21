@@ -2,10 +2,13 @@ import React, { useState } from 'react';
 import Logo from '../../components/Logo/Logo';
 import { Link } from 'react-router-dom';
 import style from './Nav.module.css';
+// Zustand State Management
+import useStore from '../../store/useStore';
+// React Icons
 import {GiHamburgerMenu} from 'react-icons/gi'
 import {AiOutlineClose} from 'react-icons/ai'
 import { FaArrowRightFromBracket } from "react-icons/fa6";
-import useStore from '../../store/useStore';
+import ProfileIcon from './ProfileIcon';
 
 const Nav = () => {
     // states from zustand
@@ -48,6 +51,7 @@ const Nav = () => {
           }
         </div>
         {/* Put a profile dropdown here if user is logged in and it should be on mobile only */}
+        <ProfileIcon />
         <div className={style.loginLink}>
           <div 
             onClick={() => setShowNav(!showNav)}

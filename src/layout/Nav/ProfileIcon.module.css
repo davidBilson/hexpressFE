@@ -1,0 +1,39 @@
+.profileIcon {
+    display: none;
+}
+.profileIconDropdown {
+    display: none;
+}
+@media screen and (max-width: 1200px) {
+    .profileIcon {
+        display: block;
+        position: absolute;
+        right: 90px;
+        font-size: 20px;
+        color: var(--night);
+        cursor: pointer;
+    }
+    .profileIconDropdown {
+        display: flex;
+        flex-direction: column;
+        background: var(--ghostwhite);
+        width: 170px;
+        position: absolute;
+        right: 0px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        margin-top: 10px;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        font-size: 14px;
+    }
+    .profileIconDropdown > span {
+        padding: 10px;
+        transition: .2s ease-in-out;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .profileIconDropdown > span:hover {
+        background: rgb(228, 228, 228);
+
+    }
+}
