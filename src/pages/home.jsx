@@ -1,3 +1,4 @@
+import {useEffect} from 'react'
 import Hero from '../components/HomePage/HeroSection/Hero';
 import ServiceRange from '../components/HomePage/ServiceRange/ServiceRange';
 import Services from '../components/HomePage/ServicesSection/Services';
