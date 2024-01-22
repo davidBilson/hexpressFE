@@ -37,64 +37,44 @@ const ProfileIcon = () => {
     
   return (
         <>
-            <div className={style.profileIcon} ref={dropdownRef}>
-                <div onClick={toggleDropdown}>
-                    <FaUserAlt />
-                    <IoMdArrowDropdown />
-                </div>
-                {
-                    showDropdown &&
-                    <div className={style.profileIconDropdown} >
-                        {
-                            user &&
-                            <span onClick={() => {navigate('/dashboard'), setShowDropdown(false)}}>
-                                <MdOutlineDashboard size={15} />
-                                My Dashboard
-                            </span>
-                        }
-                        {
-                            user &&
-                            <span onClick={() => {navigate('/dashboard/ship-now'), setShowDropdown(false)}}>
-                                <LiaShippingFastSolid size={15} />
-                                Ship Now
-                            </span>
-                        }
-                        {
-                            user &&
-                            <span onClick={() => {navigate('/dashboard/transactions'), setShowDropdown(false)}}>
-                                <GrTransaction size={15} />
-                                Transactions
-                            </span>
-                        }
-                        {
-                            user &&
-                            <span onClick={() => {navigate('/dashboard/personal-shopper'), setShowDropdown(false)}}>
-                                <GrShop size={15} />
-                                Personal Shopper
-                            </span>
-                        }
-                        {
-                            user &&
-                            <span >
-                                <TbSettings size={15} />
-                                Profile Settings
-                            </span>
-                        }
-                        {
-                            user ?
-                            <span onClick={() => {navigate('/'), setShowDropdown(false)}}>
-                                <MdLogout size={15} />
-                                Logout
-                            </span>
-                            :
-                            <span onClick={() => {navigate('/sign-in'), setShowDropdown(false)}}>
-                                <MdLogout size={15} />
-                                Login
-                            </span>
-                        }
+            {user &&
+                <div className={style.profileIcon} ref={dropdownRef}>
+                    <div onClick={toggleDropdown}>
+                        <FaUserAlt />
+                        <IoMdArrowDropdown />
                     </div>
-                }
-            </div>
+                    {
+                        showDropdown &&
+                        <div className={style.profileIconDropdown} >
+                                <span onClick={() => {navigate('/dashboard'), setShowDropdown(false)}}>
+                                    <MdOutlineDashboard size={15} />
+                                    My Dashboard
+                                </span>
+                                <span onClick={() => {navigate('/dashboard/ship-now'), setShowDropdown(false)}}>
+                                    <LiaShippingFastSolid size={15} />
+                                    Ship Now
+                                </span>
+                                <span onClick={() => {navigate('/dashboard/transactions'), setShowDropdown(false)}}>
+                                    <GrTransaction size={15} />
+                                    Transactions
+                                </span>
+                                <span onClick={() => {navigate('/dashboard/personal-shopper'), setShowDropdown(false)}}>
+                                    <GrShop size={15} />
+                                    Personal Shopper
+                                </span>
+                                <span >
+                                    <TbSettings size={15} />
+                                    Profile Settings
+                                </span>
+                            
+                                <span onClick={() => {navigate('/'), setShowDropdown(false)}}>
+                                    <MdLogout size={15} />
+                                    Logout
+                                </span>
+                        </div>
+                    }
+                </div>
+            }
         </>
   )
 }

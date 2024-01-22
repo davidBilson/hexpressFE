@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import style from './DashboardHeader.module.css'
-import useStore from '../../store/useStore'
+import style from './DashboardHeader.module.css';
+import useStore from '../../store/useStore'; 
 
 const DashboardHeader = () => {
-    const userName = useStore((initialState) => initialState.userName);
-    const [timeOfDay, setTimeOfDay] = useState('');
+  // const userName = useStore((initialState) => initialState.userName);
+  const { userName, user } = useStore();
+  const [timeOfDay, setTimeOfDay] = useState('');
 
   useEffect(() => {
     checkTimeOfDay();
@@ -27,11 +28,17 @@ const DashboardHeader = () => {
     window.open("https://localhost:5000/auth/logout", "_self")
   }
 
+  const [ shortMessage, setShortMessage ] = useState([
+    "Do you have a parcel to deliver?",
+    "How are you doing?",
+    "Logistics service at your convenience!"
+  ]);
+
   return (
     <section className={style.dashboardHeaderContainer}>
         <div>
           <h2>Good {timeOfDay}, {userName.split(" ")[0]}!</h2>
-          {/* <p>Your current dashboard for today</p> */}
+          {/* <p>{shortMessage.randomstring}</p> */}
         </div>
     </section>
   )
