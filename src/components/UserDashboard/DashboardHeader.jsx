@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import style from './DashboardHeader.module.css';
+import style from './styles/DashboardHeader.module.css';
 import useStore from '../../store/useStore'; 
 
 const DashboardHeader = () => {

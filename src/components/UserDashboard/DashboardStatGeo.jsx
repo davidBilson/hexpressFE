@@ -1,5 +1,5 @@
 import React from 'react'
-import style from './DashboardStatGeo.module.css'
+import style from './styles/DashboardStatGeo.module.css'
 import MapBg from '../../assets/mapBg.jpeg'
 import MapBg2 from '../../assets/mapBg2.jpg'
 

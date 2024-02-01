@@ -1,5 +1,5 @@
 import React from 'react'
-import style from './DashboardCarousel.module.css'
+import style from './styles/DashboardCarousel.module.css'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { TbBrandCashapp } from "react-icons/tb";
