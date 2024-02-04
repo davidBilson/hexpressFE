@@ -48,13 +48,13 @@
     border: none;
     border-radius: var(--radius3);
     transition: .3s ease-in-out;
-    color: var(--night);
-    background: white;
+    color: var(--white);
+    background: var(--theme-blue);
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .navLoginBtn:hover {
-    color: var(--white);
-    background: var(--theme-blue);
+    background: white;
+    color: var(--night);
     scale: 0.99;
 }
 .navLoginBtn:active {

@@ -18,7 +18,7 @@ const ShipNow = () => {
       <div className={style.shippingIcon}>
         <FaShippingFast />
       </div>
-      <button className={style.deliveryButton}>New Delivery</button>
+      <button className={style.deliveryButton}>New Delivery +</button>
     </section>
   );
 };
