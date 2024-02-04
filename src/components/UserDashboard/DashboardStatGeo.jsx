@@ -1,7 +1,7 @@
 import React from 'react'
 import style from './styles/DashboardStatGeo.module.css'
 import MapBg from '../../assets/mapBg.jpeg'
-import MapBg2 from '../../assets/mapBg2.jpg'
+import MapBg2 from '../../assets/mapBgg.jpeg'
 
 const DashboardStatGeo = () => {
   return (

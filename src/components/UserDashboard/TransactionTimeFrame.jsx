@@ -5,7 +5,7 @@ const TransactionTimeFrame = () => {
   const [timeFrame, setTimeFrame] = useState(true);
 
   const styleMonth = {
-    backgroundColor: timeFrame ? "rgba(0, 18, 117, 0.6)" : "rgba(0, 18, 117, 0.3)",
+    backgroundColor: timeFrame ? "rgba(0, 190, 190)" : "rgba(0, 190, 190, 0.3)",
     border: "none",
     padding: "12px",
     width: "150px",
@@ -14,7 +14,7 @@ const TransactionTimeFrame = () => {
     cursor: "pointer"
   }
   const styleYear = {
-    backgroundColor: !timeFrame ? "rgba(0, 18, 117, 0.6)" : "rgba(0, 18, 117, 0.3)",
+    backgroundColor: !timeFrame ? "rgba(0, 190, 190)" : "rgba(0, 190, 190, 0.3)",
     border: "none",
     padding: "12px",
     width: "150px",
@@ -22,6 +22,7 @@ const TransactionTimeFrame = () => {
     outline: "none",
     cursor: "pointer"
   }
+  
   return (
     <section>
         <div>

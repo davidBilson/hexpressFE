@@ -1,0 +1,15 @@
+.deliverySection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 70px 0;
+}
+.shippingIcon {
+    font-size: 200px;
+    color: lightgrey;
+}
+.deliveryButton {
+
+}
