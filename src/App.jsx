@@ -29,6 +29,7 @@ import ShipNow from './components/UserDashboard/ShipNow';
 import HexpressDelivery from './components/UserDashboard/HexpressDelivery';
 import OverseasShipping from './components/UserDashboard/OverseasShipping';
 import PersonalShopper from './components/UserDashboard/PersonalShopper';
+import PreLoader from './components/PreLoader/PreLoader';
 
 const ScrollToTop = () => {
   const location = useLocation();
@@ -82,11 +83,6 @@ const App = () => {
 
   return (
     <>
-    { loadAnimation &&
-      <div className={"loadingAnimation"} >
-        <CircleLoader  color="white" loading={true} size={100} />
-      </div>
-    }
       <Tooltip id="my-tooltip" 
         style={{
           zIndex: "500", 
