@@ -1,5 +1,4 @@
 .transactionChartContainer {
     width: 100%;
-    max-width: 1100px;
-    height: 520px;
+    height: 100%
 }

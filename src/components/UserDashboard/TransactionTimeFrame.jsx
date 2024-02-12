@@ -1,37 +1,31 @@
+import { useState } from 'react';
 import style from './styles/TransactionTimeFrame.module.css'
-import { FaSortDown } from "react-icons/fa6";
+import { IoIosArrowDown } from "react-icons/io";
 
 const TransactionTimeFrame = () => {
-  return (
-    <section>
-        <div>
-          <button style={styleMonth}>Monthly Expense</button>
-          <span>
-            Sort by: 
-            <button style={styleYear}>Year <FaSortDown /></button>
-          </span>
-        </div>
 
-        {/* Monthly Expense */}
-        <article className={style.timeFrameContainer}>
-          <div>
-            <ul>
-              <li data-tooltip-id="my-tooltip" data-tooltip-content="Hello world!">January</li>
-              <li>February</li>
-              <li>March</li>
-              <li>April</li>
-              <li>May</li>
-              <li>June</li>
-              <li>July</li>
-              <li>August</li>
-              <li>September</li>
-              <li>Octobebr</li>
-              <li>November</li>
-              <li>December</li>
-            </ul>
+  const [showSortDropDown, setShowSortDropDown] = useState(false);
+
+  return (    
+        <div className={style.timeFrameContainer}>
+          <span className={style.transactionText}>Transactions</span>
+          <div className={style.sortContainer} >
+            Sort by: 
+            <button
+              className={style.sortBtn}
+              onClick={() => setShowSortDropDown(!showSortDropDown)}>
+                Monthly<IoIosArrowDown size={16} />
+            </button>
+            {
+              showSortDropDown &&
+            <div className={style.sortDropdown}>
+              <span>Monthly</span>
+              <span>Weekly</span>
+              <span>Yearly</span>
+            </div>
+            }
           </div>
-        </article>
-      </section>
+        </div>        
   )
 }
 

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import {useEffect, useState} from 'react';
 import useStore from '../../store/useStore';
 import style from './styles/Transactions.module.css'
 import TransactionTimeFrame from './TransactionTimeFrame';
@@ -14,7 +14,7 @@ const Transactions = () => {
   return (
     <section className={style.transactionContainer}> 
       <TransactionTimeFrame />
-      <TransactionCharts />
+      <TransactionCharts /> 
     </section>
   )
 }
