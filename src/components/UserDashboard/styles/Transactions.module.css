@@ -5,18 +5,3 @@
     display: flex;
     justify-content: space-between;
 }
-.timeFrameContainer {
-    width: 100%;
-    max-width: 300px;
-}
-.timeFrameContainer > div > ul {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-}
-.timeFrameContainer > div > ul > li {
-    width: 100%;
-    padding: 12px  20px;
-    font-size: 14px;
-    background: rgba(0, 0, 0, 0.05);
-}
