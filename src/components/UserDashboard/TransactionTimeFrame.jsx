@@ -37,7 +37,7 @@ const TransactionTimeFrame = () => {
             </button>
             {
               showSortDropDown &&
-            <div className={style.sortDropdown}>
+            <div className={style.sortDropdown} data-aos="fade-up">
               <span onClick={() => {setSortText("Monthly"); closeDropDown()}} >Monthly</span>
               <span onClick={() => {setSortText("Weekly"); closeDropDown()}} >Weekly</span>
               <span onClick={() => {setSortText("Yearly"); closeDropDown()}} >Yearly</span>
