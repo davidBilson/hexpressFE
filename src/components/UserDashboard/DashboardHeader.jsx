@@ -28,6 +28,13 @@ const DashboardHeader = () => {
     }
   };
 
+  const closeNotification = () => {
+    if (showNotification) {
+      setTimeout(() => {
+        setShowNotification(false)
+      }, 3000);
+    }
+  }
   // const logout = () => {
   //   window.open("https://localhost:5000/auth/logout", "_self")
   // }
@@ -45,7 +52,7 @@ const DashboardHeader = () => {
             </span>
           </p>
           <div className={style.dashboardNotifications}>
-            <p onClick={() => setShowNotification(prev => true)}>
+            <p onClick={() => {setShowNotification(prev => true); closeNotification; }}>
               <span><IoMdNotificationsOutline size={25} /></span>
               <span>5</span>
             </p>
