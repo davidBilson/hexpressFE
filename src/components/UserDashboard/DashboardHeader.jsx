@@ -58,7 +58,7 @@ const DashboardHeader = () => {
             </p>
             {
               showNotification &&
-              <div data-aos="fade-down" className={style.dashboardCard}>
+              <div data-aos="fade-left" className={style.dashboardCard}>
                   <h4>
                     Notification 
                     <span 
