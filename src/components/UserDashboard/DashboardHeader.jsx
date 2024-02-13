@@ -34,10 +34,7 @@ const DashboardHeader = () => {
         setShowNotification(false)
       }, 3000);
     }
-  }
-  // const logout = () => {
-  //   window.open("https://localhost:5000/auth/logout", "_self")
-  // }
+  };
 
   return (
     <section className={style.dashboardHeaderContainer}>
@@ -53,12 +50,12 @@ const DashboardHeader = () => {
           </p>
           <div className={style.dashboardNotifications}>
             <p onClick={() => {setShowNotification(prev => true); closeNotification; }}>
-              <span><IoMdNotificationsOutline size={25} /></span>
+              <span><IoMdNotificationsOutline /></span>
               <span>5</span>
             </p>
             {
               showNotification &&
-              <div data-aos="fade-left" className={style.dashboardCard}>
+              <div data-aos="fade-left" className={style.dashboardNotificationCard}>
                   <h4>
                     Notification 
                     <span 
