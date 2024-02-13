@@ -1,5 +1,6 @@
 .transactionContainer {
     max-width: calc(var(--max-width) - 40px);
+    min-height: 500px;
     border-radius: 20px;
     overflow: hidden;
     margin: auto;
