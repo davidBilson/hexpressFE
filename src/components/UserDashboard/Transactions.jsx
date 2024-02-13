@@ -1,8 +1,10 @@
-import {useEffect} from 'react';
+import React, {useEffect} from 'react';
 import useStore from '../../store/useStore';
 import style from './styles/Transactions.module.css'
 import TransactionTimeFrame from './TransactionTimeFrame';
-import TransactionCharts from './TransactionCharts';
+import PreLoader from '../PreLoader/PreLoader';
+// Dynamic Import for lazy loading
+const LazyTransactionCharts = React.lazy(() => import('./TransactionCharts'));
 
 const Transactions = () => {
   const { user, userName } = useStore();
@@ -14,7 +16,10 @@ const Transactions = () => {
   return (
     <section className={style.transactionContainer}> 
       <TransactionTimeFrame />
-      <TransactionCharts />
+      {/* While mounting lazy loaded component, provide fallback UI (preloader) */}
+      <React.Suspense fallback={<PreLoader />}>
+        <LazyTransactionCharts />
+      </React.Suspense>
     </section>
   )
 }
