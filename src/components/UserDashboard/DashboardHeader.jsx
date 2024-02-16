@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import style from './styles/DashboardHeader.module.css';
 import useStore from '../../store/useStore';
 import { FaRegCalendarAlt } from "react-icons/fa";
@@ -9,7 +9,21 @@ const DashboardHeader = () => {
   // const userName = useStore((initialState) => initialState.userName);
   const { userName, user } = useStore();
   const [timeOfDay, setTimeOfDay] = useState('');
-  const [showNotification, setShowNotification] = useState(false)
+  const [showNotification, setShowNotification] = useState(false);
+  const notificationContainerRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutsideNotification = (e) => {
+      if(notificationContainerRef.current && !notificationContainerRef.current.contains(e.target)) {
+        setShowNotification(false);
+      }
+    }
+    window.addEventListener('click', handleClickOutsideNotification);
+    // clean up
+    return () => {
+      window.removeEventListener('click', handleClickOutsideNotification);
+    }
+  }, [])
 
   useEffect(() => {
     checkTimeOfDay();
@@ -48,7 +62,7 @@ const DashboardHeader = () => {
               {new Date().toDateString()}
             </span>
           </p>
-          <div className={style.dashboardNotifications}>
+          <div className={style.dashboardNotifications} ref={notificationContainerRef}>
             <p onClick={() => {setShowNotification(prev => true); closeNotification; }}>
               <span><IoMdNotificationsOutline /></span>
               <span>5</span>
