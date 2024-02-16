@@ -2,3 +2,9 @@
     width: 100%;
     height: 450px;
 }
+@media screen and (max-width: 480px) {
+    .transactionChartContainer {
+        height: 250px;
+        font-size: 13px;
+    }   
+}
