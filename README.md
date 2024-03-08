@@ -45,7 +45,7 @@ Hexpress Delivery is a robust web application developed using the MERN (MongoDB,
 - AOS: Animate On Scroll library for adding stunning animations to elements on scroll.
 - React-Tooltip and React-Toastify: Libraries for tooltips and toasts, enhancing user interaction.
   
-- [Check Backend Code](https://github.com/davidBilson/hexpressBE)
+[Check Code Base for the Backend Application](https://github.com/davidBilson/hexpressBE)
   
 ### Project Structure
 The project follows a modular and organized structure, separating frontend and backend components. Key folders include layout, pages, and store for clear code organization.
