@@ -16,6 +16,10 @@ Hexpress Delivery is a robust web application developed using the MERN (MongoDB,
 ## Features
 
 - **User Authentication:** Secure user authentication and authorization with React Router's `Navigate` and token-based validation.
+  
+- **Package Order and Delivery System:** Secure user authentication and authorization with React Router's `Navigate` and token-based validation.
+  
+- **Personal Shopper Services:** Secure user authentication and authorization with React Router's `Navigate` and token-based validation.
 
 - **Dynamic Routing:** Utilization of `react-router-dom` for smooth navigation and dynamic route rendering.
 
@@ -40,6 +44,8 @@ Hexpress Delivery is a robust web application developed using the MERN (MongoDB,
 - React Router: A routing library for declarative navigation in React applications.
 - AOS: Animate On Scroll library for adding stunning animations to elements on scroll.
 - React-Tooltip and React-Toastify: Libraries for tooltips and toasts, enhancing user interaction.
+  
+[Check Code Base for the Backend Application](https://github.com/davidBilson/hexpressBE)
   
 ### Project Structure
 The project follows a modular and organized structure, separating frontend and backend components. Key folders include layout, pages, and store for clear code organization.
