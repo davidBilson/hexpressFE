@@ -3,7 +3,7 @@ import useStore from './useStore'
 
 const Testzustand = () => {
     // access states and actions from store
-    // const { userName, setUserName } = useStore() //you can also access a variable or function from the store through object destructuring
+    // const { userName, setUserName } = useStore() //you can also access a variable or function from the store through object destructuring // best
     const userName = useStore((initialState) => initialState.userName);
     const setUserName = useStore((initialState) => initialState.setUserName);
 
