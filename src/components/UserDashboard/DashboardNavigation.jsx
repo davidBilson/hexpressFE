@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
-import { NavLink, useNavigate } from 'react-router-dom'
-import style from './styles/DashboardNavigation.module.css'
+import React, { useEffect, useState } from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
+import style from './styles/DashboardNavigation.module.css';
 // Icons
 import { FaHistory } from "react-icons/fa";
 import { AiOutlineTransaction } from "react-icons/ai";
@@ -20,7 +20,7 @@ const DashboardNavigation = () => {
       
       // Check screen width initially
       checkScreenWidth();
-      console.log(isDevice480px)
+      console.log(isDevice480px);
       // Add event listener to update state when screen width changes
       window.addEventListener('resize', checkScreenWidth);
       
@@ -38,12 +38,12 @@ const DashboardNavigation = () => {
         alignItems: 'center',
         gap: 10
       }
-    }
+    };
       
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     useEffect(() => {
-        navigate('/dashboard/history')
-    }, [])
+        navigate('/dashboard/history');
+    }, []);
   
   return (
     <div className={style.navigation}>
