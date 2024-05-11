@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+  import React, { useEffect } from 'react';
 import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 // zustand store
 import useStore from './store/useStore';
@@ -30,6 +30,7 @@ import HexpressDelivery from './components/UserDashboard/HexpressDelivery';
 import OverseasShipping from './components/UserDashboard/OverseasShipping';
 import PersonalShopper from './components/UserDashboard/PersonalShopper';
 import PreLoader from './components/PreLoader/PreLoader';
+import Upload from './pages/Upload';
 
 const ScrollToTop = () => {
   const location = useLocation();
@@ -94,10 +95,11 @@ const App = () => {
         }}
       />
       <ToastContainer />
-      <Navbar />
+      {/* <Navbar /> */}
       <ScrollToTop />
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/upload' element={<Upload />} />
         <Route path='/about' element={<About />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path='/sign-in' element={<SignIn /> } />
@@ -116,7 +118,7 @@ const App = () => {
         <Route path='/terms-of-service' element={<TermsOfService />} />
         <Route path='*' element={<PageNotFound />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
