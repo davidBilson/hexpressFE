@@ -14,7 +14,7 @@ const Upload = () => {
 
   const fetchImage = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/getImage');
+      const res = await axios.get('http://localhost:5000/image/getImage');
       console.log(res);
       if (res) {
         setFetchedImage(res.data)
@@ -34,7 +34,7 @@ const Upload = () => {
     formdata.append('file', file)
 
     try {
-      const res = await axios.post('http://localhost:5000/upload', formdata);
+      const res = await axios.post('http://localhost:5000/image/upload', formdata);
       console.log(res);
       if (res) {
         console.log(res);
@@ -65,8 +65,11 @@ const Upload = () => {
       <div className={style.fetchedImages}>
         {fetchedImage && fetchedImage.map((image) => {
           return (
-            <img key={image._id} 
-            src={`http://localhost:5000/images/`+image.image} alt={String(image.image)} />
+            <img 
+              key={image._id}
+              style={{width: "100px", display: "block", margin: "20px 0"}}
+              src={`http://localhost:5000/images/` + image.image} alt={String(image.image)} 
+            />
           )
         })}
       </div>
