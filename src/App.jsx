@@ -95,7 +95,7 @@ const App = () => {
         }}
       />
       <ToastContainer />
-      {/* <Navbar /> */}
+      <Navbar />
       <ScrollToTop />
       <Routes>
         <Route path='/' element={<Home />} />
